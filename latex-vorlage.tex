@@ -13,13 +13,13 @@
 \begin{document}
 %%% Deckblatt einbinden %%% 
 % Anpassungen nötig (Name, Titel etc.)
-\input{includes/deckblatt.tex}
+\input{includes/0-preface/0.1-deckblatt.tex}
 
 %%% Umstellung der Seiten-Nummerierung auf i, ii, iii ... %%%
 \pagenumbering{Roman} 
 
 %%% Abstract einbinden (optionale Kurzfassung Ihrer Arbeit) %%%
-\input{includes/abstract.tex}
+\input{includes/0-preface/0.2-abstract.tex}
 \cleardoublepage
 
 %%% Inhalts-, Abbildungs-, Tabellenverzeichnisse %%%
@@ -27,7 +27,7 @@
 \begin{spacing}{1}
 \tableofcontents
 \clearpage
-\input{includes/abkuerzungen.tex}
+\input{includes/0-preface/0.3-abkuerzungen.tex}
 
 \clearpage
 \thispagestyle{kapitelkopfzeile}
@@ -49,12 +49,12 @@
 % Empfehlung: strukturieren Sie Ihren Text in einzelnen Dateien 
 % und binden Sie diese hier mit \input{includes/dateiname.tex} ein
 
-\input{includes/einleitung.tex}
+\input{includes/1 introduction/1-introduction.tex}
 \blinddocument
 \input{includes/text_mit_zitaten.tex}
 \input{includes/abbildungen_und_tabellen.tex}
 
-\input{includes/anhang.tex}
+\input{includes/8-post/anhang.tex}
 \input{includes/release_notes.tex}
 %%% Ende des eigentlichen Inhalts %%%
 
