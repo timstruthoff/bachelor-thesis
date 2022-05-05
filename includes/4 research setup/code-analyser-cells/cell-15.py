@@ -1,0 +1,1 @@
+jiraImportPreselected = jiraImportFiltered.copy()

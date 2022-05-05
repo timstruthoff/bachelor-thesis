@@ -1,0 +1,30 @@
+tempDataframeForDrawing = codeAnalysisInput.copy()
+
+tempDataframeForDrawing.lizardCyclomaticComplexity = codeAnalysisInput.lizardCyclomaticComplexity / codeAnalysisInput.lizardCyclomaticComplexity.max()
+tempDataframeForDrawing.indentationComplexity = codeAnalysisInput.indentationComplexity / codeAnalysisInput.indentationComplexity.max()
+tempDataframeForDrawing.platoCyclomaticComplexity = codeAnalysisInput.platoCyclomaticComplexity / codeAnalysisInput.platoCyclomaticComplexity.max()
+tempDataframeForDrawing.platoCyclomaticDensity = codeAnalysisInput.platoCyclomaticDensity / codeAnalysisInput.platoCyclomaticDensity.max()
+tempDataframeForDrawing.platoHalsteadEffort = codeAnalysisInput.platoHalsteadEffort / codeAnalysisInput.platoHalsteadEffort.max()
+tempDataframeForDrawing.platoSlocLogical = codeAnalysisInput.platoSlocLogical / codeAnalysisInput.platoSlocLogical.max()
+tempDataframeForDrawing.platoSlocPhysical = codeAnalysisInput.platoSlocPhysical / codeAnalysisInput.platoSlocPhysical.max()
+# tempDataframeForDrawing.multimetricCyclomaticComplexity = codeAnalysisInput.multimetricCyclomaticComplexity / codeAnalysisInput.multimetricCyclomaticComplexity.max()
+# tempDataframeForDrawing.multimetricHalsteadEffort = codeAnalysisInput.multimetricHalsteadEffort / codeAnalysisInput.multimetricHalsteadEffort.max()
+# tempDataframeForDrawing.multimetricLoc = codeAnalysisInput.multimetricLoc / codeAnalysisInput.multimetricLoc.max()
+
+plt.xlabel('Time')
+plt.ylabel('Values')
+
+plt.plot(tempDataframeForDrawing.timestamp, tempDataframeForDrawing.lizardCyclomaticComplexity, label='lizardCyclomaticComplexity')
+plt.plot(tempDataframeForDrawing.timestamp, tempDataframeForDrawing.indentationComplexity, label='indentationComplexity')
+plt.plot(tempDataframeForDrawing.timestamp, tempDataframeForDrawing.platoCyclomaticComplexity, label='platoCyclomaticComplexity')
+plt.plot(tempDataframeForDrawing.timestamp, tempDataframeForDrawing.platoCyclomaticDensity, label='platoCyclomaticDensity')
+plt.plot(tempDataframeForDrawing.timestamp, tempDataframeForDrawing.platoHalsteadEffort, label='platoHalsteadEffort')
+plt.plot(tempDataframeForDrawing.timestamp, tempDataframeForDrawing.platoSlocLogical, label='platoSlocLogical')
+plt.plot(tempDataframeForDrawing.timestamp, tempDataframeForDrawing.platoSlocPhysical, label='platoSlocPhysical')
+# plt.plot(tempDataframeForDrawing.timestamp, tempDataframeForDrawing.multimetricCyclomaticComplexity, label='multimetricCyclomaticComplexity')
+# plt.plot(tempDataframeForDrawing.timestamp, tempDataframeForDrawing.multimetricHalsteadEffort, label='multimetricHalsteadEffort')
+# plt.plot(tempDataframeForDrawing.timestamp, tempDataframeForDrawing.multimetricLoc, label='multimetricLoc')
+
+plt.legend(loc="upper left")
+
+plt.show()
