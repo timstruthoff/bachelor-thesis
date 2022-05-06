@@ -1,4 +1,4 @@
-\chapter{Softwarekomplexitätsmaße}\label{softwarekomplexituxe4tsmauxdfe}
+\chapter{Softwarekomplexitätsma\ss e}\label{softwarekomplexituxe4tsmauxdfe}
 
 Die Analyse der Softwarekomplexität ist ein Teil der statischen
 Sourcecode-Analyse. In der Code-Analyse wird im Nachhinein (a
@@ -30,7 +30,7 @@ Weiterentwicklung stattfinden.
 
 \section{Definitionen}\label{definitionen}
 
-Eine Betrachtung von Softwarekomplexitätsmaßen setzt zunächst eine
+Eine Betrachtung von Softwarekomplexitätsma\ss en setzt zunächst eine
 genaue Definition dieser voraus. Softwarekomplexitätsmetriken sind
 Metriken zur Messung der Komplexität einer Software. Diese drei Teile
 der Definition von Softwarekomplexitätsmetriken werden im Folgenden
@@ -47,7 +47,7 @@ Aber auch hier schlägt das \ac{IEEE} Standard Glossar eine allgemein
 anerkannte Definition vor: „{[}Complexity is{]} the degree to which a
 system or component has a design or implementation that is difficult to
 understand and verify``\footcite[Vgl. ][S. 18]{IEEEStandardGlossary}. Nach dieser
-Definition ist Komplexität ein Maß dafür, wie schwierig eine Software zu
+Definition ist Komplexität ein Ma\ss  dafür, wie schwierig eine Software zu
 verstehen und zu validieren ist. Fenton und Jones bauen auf dieser
 Definition auf und schlagen vier Arten von Komplexität vor: 1. Die
 Komplexität des Problems, welches die Software zu lösen versucht, 2. Die
@@ -56,17 +56,17 @@ Struktur der Software und 4. Die kognitive Komplexität der
 Software \footnote{\cite[Vgl. ][S. 258]{fentonSoftwareMetricsRigorous2003} und \cite[][S. 449]{jonesAppliedSoftwareMeasurement2008}}. Nach dieser Kategorisierung bestimmen die, in dieser
 Arbeit behandelten Metriken die Komplexität der Struktur der Software
 (3). Weiter lässt sich zwischen inter- und intra-modularen
-Komplexitätsmaßen unterscheiden. Hier werden ausschließlich
-intra-modulare Komplexitätsmaßen behandelt. Diese Messen die Komplexität
+Komplexitätsma\ss en unterscheiden. Hier werden ausschlie\ss lich
+intra-modulare Komplexitätsma\ss en behandelt. Diese Messen die Komplexität
 einzelner Programmteile\footcite[Vgl. ][S. 7ff]{zuseSoftwareComplexityMeasures1991}.
 
 Im Kontext der Softwaremetrie werden Metriken als ein Messystem bzw. ein
 Verfahren zum Quantifizieren von Eigenschaften von Software
-definiert \footnote{\cite[Vgl. ][S. 35ff]{dumkeTheorieUndPraxis1994}, \cite[][S. 4ff]{ebertSoftwareMetrikenPraxisEinfuhrung1996}, \cite[][]{augstenWasSindSoftwaremetriken} und \cite[][S. 2f]{IEEEStandardSoftware}}. Im Deutschen werden sie oft als Synonym für Maß bzw. Maßzahl
+definiert \footnote{\cite[Vgl. ][S. 35ff]{dumkeTheorieUndPraxis1994}, \cite[][S. 4ff]{ebertSoftwareMetrikenPraxisEinfuhrung1996}, \cite[][]{augstenWasSindSoftwaremetriken} und \cite[][S. 2f]{IEEEStandardSoftware}}. Im Deutschen werden sie oft als Synonym für Ma\ss  bzw. Ma\ss zahl
 genutzt. Im Englischen findet zwischen den Begriffen „metric`` und
 „measure`` eine genauere Unterscheidung statt: Eine Metrik sei eine
 Funktion, die als Eingabe Daten eines Gegenstandes verwendet und hieraus
-eine Zahl zur Quantifizierung dieser Eigenschaft(en) liefert\footcite[Vgl. ][S. 3]{IEEEStandardSoftware}. Ein Maß (measure) sei dahingegen die Konkrete Anwendung dieser
+eine Zahl zur Quantifizierung dieser Eigenschaft(en) liefert\footcite[Vgl. ][S. 3]{IEEEStandardSoftware}. Ein Ma\ss  (measure) sei dahingegen die Konkrete Anwendung dieser
 Metrik\footcite[Vgl. ][S. 2]{IEEEStandardSoftware}. Aufgrund dieser
 Unterscheidung erscheint der Begriff Metrik für die, in dieser Arbeit
 behandelten Verfahren als passender.
@@ -83,7 +83,7 @@ kritisiert.
 Zum einen besteht Kritik an dem quantitativen Erfassen subjektiver
 Softwareeigenschaften im Generellen. So können Metriken nicht
 \emph{direkt} messen, was für Menschen als subjektive Komplexität
-wahrgenommen wird, auch wenn das Verwenden von mehreren Maßzahlen hilft,
+wahrgenommen wird, auch wenn das Verwenden von mehreren Ma\ss zahlen hilft,
 eine robustere Perspektive zu schaffen\footcite[Vgl. ][S. 2]{rumreichExaminingSoftwareDesign2019}.
 
 Weiter werden auch die Komplexitätsmetriken im Speziellen angezweifelt:
@@ -102,7 +102,7 @@ berücksichtigt\footcite[Vgl. ][S. 277]{hoffmannSoftwareQualitat2013}. Ein Beisp
 Problematik sind die Vererbungsmechanismen in objekt-orientierten
 Programmiersprachen. Eine Vererbung erhöht z.B. in der klassischen
 Metrik der zyklomatischen Komplexität nicht die Komplexität, was an
-dieser Stelle die Korrelation von Code-Größe und der Komplexität des
+dieser Stelle die Korrelation von Code-Grö\ss e und der Komplexität des
 Codes aushebelt\footcite[Vgl. ][S. 277]{hoffmannSoftwareQualitat2013}.
 
 Ferner ist auch der Zusammenhang zwischen Softwaremetriken und externen
@@ -117,66 +117,66 @@ Softwaremetriken und externen Eigenschaften von Software festgestellt
 werden\footcite[Vgl. ][S. 203 und 208]{revillaCorrelationsInternalSoftware2007}.
 
 Als mögliches Fazit aus diesen Studien wird in dieser Arbeit
-vorschlagen, dass die Anwendbarkeit der Maßzahlen vom jeweiligen Kontext
+vorschlagen, dass die Anwendbarkeit der Ma\ss zahlen vom jeweiligen Kontext
 des Softwareprojektes und von dem erwarteten Ergebnis abhängt. Dieses
 Fazit unterstreicht noch einmal die Relevanz dieser Arbeit. So kann mit
 dem Ergebnis dieser Arbeit evaluiert werden, ob und welche
-Softwaremaßzahlen im Kontext des \ac{DIL} Ratingen anwendbar sind.
+Softwarema\ss zahlen im Kontext des \ac{DIL} Ratingen anwendbar sind.
 
-\section{Eine Auswahl von Softwarekomplexitätsmaßzahlen}\label{eine-auswahl-von-softwarekomplexitatsmasszahlen}
+\section{Eine Auswahl von Softwarekomplexitätsma\ss zahlen}\label{eine-auswahl-von-softwarekomplexitatsmasszahlen}
 
 Trotz der umfangreichen Kritik an der Vermessung von Software wurden in
-den letzten Jahrzehnten eine Vielzahl von Maßzahlen entwickelt.
+den letzten Jahrzehnten eine Vielzahl von Ma\ss zahlen entwickelt.
 
 In dieser Arbeit werden insgesamt vier Metriken für die Komplexität von
 Software betrachtet. Zunächst bietet die Anzahl an logischen Codezeilen
 einen ersten Eindruck der Komplexität. Sie ist aber noch eher ein
-Umfangsmaß als ein Komplexitätsmaß. Weiter werden die zyklomatische
-Komplexität von Thomas McCabe, sowie die Softwaremaßzahlen von Halstead
-behandelt. Als letzte Maßzahl wird die Einrückungskomplexität der
+Umfangsma\ss  als ein Komplexitätsma\ss . Weiter werden die zyklomatische
+Komplexität von Thomas McCabe, sowie die Softwarema\ss zahlen von Halstead
+behandelt. Als letzte Ma\ss zahl wird die Einrückungskomplexität der
 Autoren Hindle, Godfrey, und Holt betrachtet.
 
-Die Auswahl der ersten drei Komplexitätsmaßen beruft sich auf ihre
+Die Auswahl der ersten drei Komplexitätsma\ss en beruft sich auf ihre
 generelle Popularität in der Softwaremetrie. Im Rahmen einer
 umfangreichen Literaturrecherche konnten für diese Metriken die meisten
-Referenzen gefunden werden. Die Maßzahl der logischen Codezeilen wird
-von Zuse91 als ein wichtiges Maß zum Bestimmen des Umfangs und der
+Referenzen gefunden werden. Die Ma\ss zahl der logischen Codezeilen wird
+von Zuse91 als ein wichtiges Ma\ss  zum Bestimmen des Umfangs und der
 Komplexität einer Softwareanwendung eingestuft\footcite[Vgl. ][S. 145]{zuseSoftwareComplexityMeasures1991}.
 Diese Position wird auch von \cite{satoExperiencesTrackingAgile2006} und
 \cite{aleneziEmpiricalAnalysisComplexity2015} bekräftigt. Die zyklomatische
 Komplexität von McCabe wird ebenfalls von Zuse als eine der bekanntesten
-Maßzahlen eingestuft \footcite[Vgl. ][S. 145]{zuseSoftwareComplexityMeasures1991}. Weiter bekräftigt
-fentonSoftwareMetricsRigorous2003, dass diese Maßzahl zum Messen der
+Ma\ss zahlen eingestuft \footcite[Vgl. ][S. 145]{zuseSoftwareComplexityMeasures1991}. Weiter bekräftigt
+fentonSoftwareMetricsRigorous2003, dass diese Ma\ss zahl zum Messen der
 Softwarekomplexität geeignet sei\footcite[Vgl. ][S. 31]{fentonSoftwareMetricsRigorous2003}. Auch die vier Autoren Revilla\footcite[Vgl. ][S. 203]{revillaCorrelationsInternalSoftware2007},
 Jones\footcite[Vgl. ][S. 335, 627 und 449]{jonesAppliedSoftwareMeasurement2008}, Sato\footcite[Vgl. ][]{satoExperiencesTrackingAgile2006}
 und Alenezi\footcite[Vgl. ][]{aleneziEmpiricalAnalysisComplexity2015} verweisen
-auf die zyklomatische Komplexität als Maßzahl für die Komplexität einer
+auf die zyklomatische Komplexität als Ma\ss zahl für die Komplexität einer
 Applikation. Jones sagt dabei zusätzlich aus, dass diese
-Komplexitätsmaßzahl ein besonders breites Anwendungsspektrum bedienen
-könne\footcite[Vgl. ][S. 335, 627 und 449]{jonesAppliedSoftwareMeasurement2008}. Auch die Softwaremaßzahlen
+Komplexitätsma\ss zahl ein besonders breites Anwendungsspektrum bedienen
+könne\footcite[Vgl. ][S. 335, 627 und 449]{jonesAppliedSoftwareMeasurement2008}. Auch die Softwarema\ss zahlen
 von Halstead werden in der Literatur häufig referenziert. Zuse und
-Revilla bekräftigen die Verbreitung dieser Maßzahlen\footnote{\cite[Vgl. ][S. 145]{zuseSoftwareComplexityMeasures1991} und \cite[S. 203]{revillaCorrelationsInternalSoftware2007}}. Zusätzlich sagt Fenton aus, dass die Maßzahlen
+Revilla bekräftigen die Verbreitung dieser Ma\ss zahlen\footnote{\cite[Vgl. ][S. 145]{zuseSoftwareComplexityMeasures1991} und \cite[S. 203]{revillaCorrelationsInternalSoftware2007}}. Zusätzlich sagt Fenton aus, dass die Ma\ss zahlen
 geeignet zum Messen der Softwarekomplexität seien\footcite[Vgl. ][S. 31]{fentonSoftwareMetricsRigorous2003}.
 
 Zusätzlich wird die Einrückungskomplexität betrachtet, da sie einen, im
-Gegensatz zu den anderen Maßzahlen methodisch sehr abweichenden Ansatz
+Gegensatz zu den anderen Ma\ss zahlen methodisch sehr abweichenden Ansatz
 verfolgt. So betrachtet sie im Gegensatz zu den
-anderen Maßzahlen nicht die Aufteilung auf Codezeilen oder den Inhalt
+anderen Ma\ss zahlen nicht die Aufteilung auf Codezeilen oder den Inhalt
 des Codes, sondern die Einrückung der einzelnen Codezeilen.
 
-Neben diesen vier Maßzahlen bestehen auch noch eine Vielzahl an weiteren
+Neben diesen vier Ma\ss zahlen bestehen auch noch eine Vielzahl an weiteren
 Messungsmethoden, die in dieser Arbeit aber keine weitere Betrachtung
 finden sollen. Zum Beispiel wurden die gewichtete Anzahl an Methoden pro
 Klasse (WMC)\footcite[Vgl. ][]{satoExperiencesTrackingAgile2006}, die Anzahl an
-Kommentaren\footcite[Vgl. ][S. 207]{revillaCorrelationsInternalSoftware2007}, die Größe der Klasse\footcite[Vgl. ][]{satoExperiencesTrackingAgile2006}
+Kommentaren\footcite[Vgl. ][S. 207]{revillaCorrelationsInternalSoftware2007}, die Grö\ss e der Klasse\footcite[Vgl. ][]{satoExperiencesTrackingAgile2006}
 und die Anzahl an Testcodezeilen\footcite[Vgl. ][]{satoExperiencesTrackingAgile2006}
 nicht weiter betrachtet.
 
-Zwischen drei der ausgewählten Maßzahlen wurden bereits Korrelationen
+Zwischen drei der ausgewählten Ma\ss zahlen wurden bereits Korrelationen
 nachgewiesen. Zunächst besteht eine starke Korrelation zwischen der
 Anzahl an logischen Codezeilen und dem Aufwand nach Halstead\footcite[Vgl. ][S. 627]{jonesAppliedSoftwareMeasurement2008}. Eine noch stärkere, linear-stabile Korrelation lässt sich
 zwischen der Anzahl logischer Code Zeilen und der zyklomatischen
-Komplexitätsmaßzahl nachweisen. Diese Korrelation konnte über
+Komplexitätsma\ss zahl nachweisen. Diese Korrelation konnte über
 Programmierer*innen, Programme, Sprachen und Programmierparadigma hinweg
 bewiesen werden\footnote{\cite[Vgl. ][S. 627]{jonesAppliedSoftwareMeasurement2008} und \cite[S. 137]{jayCyclomaticComplexityLines2009}}.
 
@@ -197,7 +197,7 @@ begrenzt eingestuft\footnote{\cite[Vgl. ][S. 264]{hoffmannSoftwareQualitat2013}
 und \cite[S. 2]{rumreichExaminingSoftwareDesign2019}}. Unter anderem der Programmierstil und die Programmiersprache
 haben einen Einfluss auf die Anzahl der Codezeilen (Hoffmann 2013:264,
 Hoffmann 2013:264). Gleichzeitig erfüllt sie jedoch die Assoziativität,
-Kommutativität und Monotonität\footcite[Vgl. ][S. 142]{zuseSoftwareComplexityMeasures1991} als wesentliche Qualitätskriterien für Maßzahlen.
+Kommutativität und Monotonität\footcite[Vgl. ][S. 142]{zuseSoftwareComplexityMeasures1991} als wesentliche Qualitätskriterien für Ma\ss zahlen.
 
 Eine Weiterentwicklung der LOC-Metrik ist u.a. die NCSS-Metrik (Non
 Commented Source Statements). Sie misst genauso wie die LOC-Metrik die
@@ -212,13 +212,13 @@ in seinem Aufsatz „A Complexity Metric``\footcite[Vgl. ][]{mccabeComplexityMea
 veröffentlicht\footcite[Vgl. ][S. 185]{sneedSoftwareZahlenVermessung2010}. Die zyklomatische
 Komplexität gehört zu den Kontrollflussmetriken\footcite[Vgl. ][S. 88]{ebertSoftwareMetrikenPraxisEinfuhrung1996}. In der Praxis wird sie von vielen Firmen
 entwicklungsbegleitend kontinuierlich erhoben, um vor problematischen
-Programmkomponenten frühzeitig zu warnen. Dabei fließt sie oft auch in
+Programmkomponenten frühzeitig zu warnen. Dabei flie\ss t sie oft auch in
 die Abnahmekriterien für Software ein\footcite[Vgl. ][S. 275]{hoffmannSoftwareQualitat2013}.
 
-Die zyklomatische Komplexität ist definiert als eine Maßzahl für die
+Die zyklomatische Komplexität ist definiert als eine Ma\ss zahl für die
 Kontrollflusskomplexität eines Programmes\footnote{\cite[Vgl. ][S. 2]{rumreichExaminingSoftwareDesign2019} und \cite[S. 335]{jonesAppliedSoftwareMeasurement2008}}. Sie misst die Anzahl von linear
 unabhängigen Pfaden auf dem Kontrollflussgraphen eines Programmes und
-liefert so ein normalisiertes Komplexitätsmaß\footcite[Vgl. ][S. 2]{rumreichExaminingSoftwareDesign2019}.
+liefert so ein normalisiertes Komplexitätsma\ss \footcite[Vgl. ][S. 2]{rumreichExaminingSoftwareDesign2019}.
 
 Zur Berechnung der zyklomatischen Komplexität wird der Programmcode
 zunächst in einen Graphen aus Knoten und Kanten umgewandelt\footnote{\cite[Vgl. ][S. 185]{sneedSoftwareZahlenVermessung2010} und \cite[S. 335]{jonesAppliedSoftwareMeasurement2008}}. Dazu wird der Quelltext in einen
@@ -232,7 +232,7 @@ Der Umwandlungsprozess wird in Abbildung .. beschrieben.
 GRAFIK
 
 Aus den Eigenschaften dieses Kontrollflussgraphen kann nun die
-zyklomatische Komplexität mit Mitteln der Graphentheorie\footcite[Vgl. ][S. 273]{hoffmannSoftwareQualitat2013} berechnet werden. Als relevante Größen kommen dabei die
+zyklomatische Komplexität mit Mitteln der Graphentheorie\footcite[Vgl. ][S. 273]{hoffmannSoftwareQualitat2013} berechnet werden. Als relevante Grö\ss en kommen dabei die
 Anzahl der Kanten des Graphen (E), die Anzahl der Knoten (N), sowie die
 Anzahl unabhängiger Teilgraphen (p) zum Einsatz. Die Anzahl unabhängiger
 Teilgraphen entspricht der Anzahl unabhängiger Module bzw. Funktionen in
@@ -248,7 +248,7 @@ Die zyklomatische Komplexität (V(Z)) entspricht also der Anzahl an
 Kanten (E) minus der Anzahl an Knoten (N) plus der doppelten Anzahl der
 zusammenhängenden Einzelgraphen (p) (Hoffmann 2013:273, Jones 2008:335,
 Hoffmann 2013:273, Ebert 1996:88, Sneed et al 2010:185). Also ist sie
-stets um eins größer als die Anzahl an Verzweigungen in einem Programm
+stets um eins grö\ss er als die Anzahl an Verzweigungen in einem Programm
 (Hoffmann 2013:274).
 
 In der konkreten Anwendung wird die zyklomatische Komplexität oft als
@@ -260,19 +260,19 @@ eine vollständige Testabdeckung des Quelltextes benötigt werden.
 Die zyklomatische Komplexität wurde in der Fachliteratur vielfach
 zitiert und vor allem auch vielfach kritisiert.
 
-Zunächst wird allgemein kritisiert, dass die Maßzahl nur die Komplexität
+Zunächst wird allgemein kritisiert, dass die Ma\ss zahl nur die Komplexität
 der Ablauflogik des Codes und nicht die Komplexität des gesamten Codes
 misst\footcite[Vgl. ][S. 186]{sneedSoftwareZahlenVermessung2010}. Interne Eigenschaften der Knoten\footnote{\cite[Vgl. ][S. 73]{hoffmannSoftwareQualitat2013} und \cite[S. 2]{rumreichExaminingSoftwareDesign2019}}, die Komplexität im Datenfluss\footcite[Vgl. ][S. 2]{rumreichExaminingSoftwareDesign2019} sowie die Verschachtelung von Modulen werden
 ignoriert\footcite[Vgl. ][S. 89ff]{zuseSoftwareComplexityMeasures1991}. Also lässt sich sagen, dass die
-Maßzahl für prozeduralen Code eine gewisse Bedeutung hat, in
+Ma\ss zahl für prozeduralen Code eine gewisse Bedeutung hat, in
 objektorientiertem Code jedoch nur die Komplexität der einzelnen
 Methodenkörper misst\footcite[Vgl. ][S. 186]{sneedSoftwareZahlenVermessung2010}.
 
 Insgesamt wird geschlussfolgert, dass die zyklomatische Komplexität nur
-mit Vorsicht anzuwenden sei und in Relation zu anderen Maßzahlen gesetzt
+mit Vorsicht anzuwenden sei und in Relation zu anderen Ma\ss zahlen gesetzt
 werden müsse\footcite[Vgl. ][S. 52]{fentonSoftwareMetricsRigorous2003}. Genau
 aus diesem Grund wird sie in dieser Arbeit in den Kontext der agilen
-Aufwandsabschätzungen und in Relation zu anderen Maßzahlen gesetzt.
+Aufwandsabschätzungen und in Relation zu anderen Ma\ss zahlen gesetzt.
 
 \subsection{Halstead Metriken}\label{Halstead-Metriken}
 
@@ -335,10 +335,10 @@ vorkommenden Operanden und Operatoren :
 \emph{Länge (N) = Operatorenvorkommnisse (N1) + Operandenvorkommnisse
 (N2) 42 = 27 + 15}
 
-Weiter Berechnet Halstead die Größe des Programmcodes durch einen
+Weiter Berechnet Halstead die Grö\ss e des Programmcodes durch einen
 Logarithmus:
 
-\emph{Größe (Volume / V) = Länge (N) * log2 (Wortschatz (n) ) 53,71 = 42
+\emph{Grö\ss e (Volume / V) = Länge (N) * log2 (Wortschatz (n) ) 53,71 = 42
 * log(19)}
 
 Für die Sprachkomplexität setzt er jeweils die Operatoren ins Verhältnis
@@ -348,15 +348,15 @@ Operandenvorkommnissen. Beide Werte werden miteinander multipliziert:
 \emph{Komplexität = (Operatoren / Operatorenvorkommnisse) * (Operanden /
 Operandenvorkommnisse) 0,207 =ca (12 / 27) * (7 / 15)}
 
-Zuletzt berechnet er den Aufwand als Quotient aus Programmgröße und
-Komplexität. Je komplexer oder größer ein Programm ist, desto länger
+Zuletzt berechnet er den Aufwand als Quotient aus Programmgrö\ss e und
+Komplexität. Je komplexer oder grö\ss er ein Programm ist, desto länger
 dauere, es dieses Programm zu schreiben:
 
-\emph{Aufwand (E) = Größe / Komplexität 259,47 = 53,71 / 0,207}
+\emph{Aufwand (E) = Grö\ss e / Komplexität 259,47 = 53,71 / 0,207}
 
 Die von Halstead vorgeschlagenen Metriken wurden vielfach kritisiert. Er
 hat die Berechnungen nie empirisch untermauert und in späteren
-empirischen Studien wurden sie sogar widerlegt\footcite[Vgl. ][S. 185]{sneedSoftwareZahlenVermessung2010}. Insbesondere sei zu kritisieren, dass die Codegröße,
+empirischen Studien wurden sie sogar widerlegt\footcite[Vgl. ][S. 185]{sneedSoftwareZahlenVermessung2010}. Insbesondere sei zu kritisieren, dass die Codegrö\ss e,
 Komplexität und der Aufwand nach Halstead nicht das Kriterium der
 Monotonität erfüllen. Sie können also nicht auf einer Verhältnisskala
 verwendetet werden und nur die Berechnung von Medianwerten sei
@@ -368,13 +368,13 @@ Anwendung treffen\footcite[Vgl. ][S. 2]{rumreichExaminingSoftwareDesign2019}. In
 
 \subsection{Einrückungskomplexität}\label{Einruckungskomplexitat}
 
-Als letztes Komplexitätsmaß wird hier die Einrückungskomplexität
+Als letztes Komplexitätsma\ss  wird hier die Einrückungskomplexität
 vorgestellt. Sie wurde von Abram Hindle, Michael W. Godfrey und Richard
 C. Holt an der University of Waterloo entwickelt und zuerst mit ihrer
 Arbeit „Reading Beside the Lines: Indentation as a Proxy for Complexity
 Metrics `` auf der sechzehnten internationalen IEEE Konferenz zum
-Verständnis von Computerprogrammen vorgestellt\footcite[Vgl. ][S. 1]{hindleReadingLinesIndentation2008}. Die Komplexitätsmaßzahl ist im Vergleich zu den anderen hier
-behandelten Metriken verhältnismäßig neu, wurde aber bereits in Arbeiten
+Verständnis von Computerprogrammen vorgestellt\footcite[Vgl. ][S. 1]{hindleReadingLinesIndentation2008}. Die Komplexitätsma\ss zahl ist im Vergleich zu den anderen hier
+behandelten Metriken verhältnismä\ss ig neu, wurde aber bereits in Arbeiten
 von Lalouche et. al\footcite[Vgl. ][S. 10]{gilWhenSoftwareComplexity2016}
 \footcite[Vgl. ][S. 7]{gilCorrelationSizeMetric2017} und Landman et. al
 \footcite[Vgl. ][S. 6]{landmanEmpiricalAnalysisRelationship2016} referenziert.
@@ -394,7 +394,7 @@ Einrückung einen neuen Handlungskontext, neue Funktionen oder einen
 neuen Ausdruck. In jedem dieser drei Typen von
 Programmiersprachen sind in der Regel Stellen im Code eingerückt, die
 die Komplexität des Codes erhöhen. Also lasse sich schlussfolgern, dass
-die Menge der Einrückungen ein Maß der Komplexität eines Programmes sei.
+die Menge der Einrückungen ein Ma\ss  der Komplexität eines Programmes sei.
 
 Zur Verifizierung dieser These setzten die Autoren die
 Einrückungskomplexität in ein Verhältnis zu den älteren Metriken wie der
@@ -406,7 +406,7 @@ Korrelation der Metriken nahe\footcite[Vgl. ][S. 2]{hindleReadingLinesUsing2009}
 Diese Korrelation konnte von den Autoren in einer Studie von 278
 populären Open Source Projekten erfolgreich nachgewiesen
 werden. Damit sei die Validität der
-Einrückungskomplexität als Komplexitätsmaß von Software nachgewiesen.
+Einrückungskomplexität als Komplexitätsma\ss  von Software nachgewiesen.
 
 Für die Berechnung der Einrückungskomplexität werden die Einrückungen
 der einzelnen Codezeilen im Quelltext betrachtet. Die Anzahl an
@@ -431,7 +431,7 @@ Programmiersprache voraus\footcite[Vgl. ][S. 1]{hindleReadingLinesUsing2009}
 
 Als zusätzlichen Vorteil führen die Autoren auf, dass die
 Einrückungskomplexität weniger Berechnungsschritte benötige als andere
-Komplexitätsmaßen. Demnach sei sie günstiger in der Durchführung als
+Komplexitätsma\ss en. Demnach sei sie günstiger in der Durchführung als
 manche andere Metriken\footcite[Vgl. ][S. 20f]{hindleReadingLinesUsing2009}.
 Vergleichsoperatoren und Zuweisungsoperatoren. Operanden sind in der
 Regel Datenelemente wie Zahlen oder Text.
@@ -468,10 +468,10 @@ vorkommenden Operanden und Operatoren :
 \emph{Länge (N) = Operatorenvorkommnisse (N1) + Operandenvorkommnisse
 (N2) 42 = 27 + 15}
 
-Weiter Berechnet Halstead die Größe des Programmcodes durch einen
+Weiter Berechnet Halstead die Grö\ss e des Programmcodes durch einen
 Logarithmus:
 
-\emph{Größe (Volume / V) = Länge (N) * log2 (Wortschatz (n) ) 53,71 = 42
+\emph{Grö\ss e (Volume / V) = Länge (N) * log2 (Wortschatz (n) ) 53,71 = 42
 * log(19)}
 
 Für die Sprachkomplexität setzt er jeweils die Operatoren ins Verhältnis
@@ -481,15 +481,15 @@ Operandenvorkommnissen. Beide Werte werden miteinander multipliziert:
 \emph{Komplexität = (Operatoren / Operatorenvorkommnisse) * (Operanden /
 Operandenvorkommnisse) 0,207 =ca (12 / 27) * (7 / 15)}
 
-Zuletzt berechnet er den Aufwand als Quotient aus Programmgröße und
-Komplexität. Je komplexer oder größer ein Programm ist, desto länger
+Zuletzt berechnet er den Aufwand als Quotient aus Programmgrö\ss e und
+Komplexität. Je komplexer oder grö\ss er ein Programm ist, desto länger
 dauere, es dieses Programm zu schreiben:
 
-\emph{Aufwand (E) = Größe / Komplexität 259,47 = 53,71 / 0,207}
+\emph{Aufwand (E) = Grö\ss e / Komplexität 259,47 = 53,71 / 0,207}
 
 Die von Halstead vorgeschlagenen Metriken wurden vielfach kritisiert. Er
 hat die Berechnungen nie empirisch untermauert und in späteren
-empirischen Studien wurden sie sogar widerlegt\footcite[Vgl. ][S. 185]{sneedSoftwareZahlenVermessung2010}. Insbesondere sei zu kritisieren, dass die Codegröße,
+empirischen Studien wurden sie sogar widerlegt\footcite[Vgl. ][S. 185]{sneedSoftwareZahlenVermessung2010}. Insbesondere sei zu kritisieren, dass die Codegrö\ss e,
 Komplexität und der Aufwand nach Halstead nicht das Kriterium der
 Monotonität erfüllen. Sie können also nicht auf einer Verhältnisskala
 verwendetet werden und nur die Berechnung von Medianwerten sei
@@ -501,13 +501,13 @@ Anwendung treffen\footcite[Vgl. ][S. 2]{rumreichExaminingSoftwareDesign2019}. In
 
 \subsection{Einrückungskomplexität}\label{Einruckungskomplexitat}
 
-Als letztes Komplexitätsmaß wird hier die Einrückungskomplexität
+Als letztes Komplexitätsma\ss  wird hier die Einrückungskomplexität
 vorgestellt. Sie wurde von Abram Hindle, Michael W. Godfrey und Richard
 C. Holt an der University of Waterloo entwickelt und zuerst mit ihrer
 Arbeit „Reading Beside the Lines: Indentation as a Proxy for Complexity
 Metrics `` auf der sechzehnten internationalen IEEE Konferenz zum
-Verständnis von Computerprogrammen vorgestellt\footcite[Vgl. ][S. 1]{hindleReadingLinesIndentation2008}. Die Komplexitätsmaßzahl ist im Vergleich zu den anderen hier
-behandelten Metriken verhältnismäßig neu, wurde aber bereits in Arbeiten
+Verständnis von Computerprogrammen vorgestellt\footcite[Vgl. ][S. 1]{hindleReadingLinesIndentation2008}. Die Komplexitätsma\ss zahl ist im Vergleich zu den anderen hier
+behandelten Metriken verhältnismä\ss ig neu, wurde aber bereits in Arbeiten
 von Lalouche et. al\footcite[Vgl. ][S. 10]{gilWhenSoftwareComplexity2016}
 \footcite[Vgl. ][S. 7]{gilCorrelationSizeMetric2017} und Landman et. al
 \footcite[Vgl. ][S. 6]{landmanEmpiricalAnalysisRelationship2016} referenziert.
@@ -527,7 +527,7 @@ Einrückung einen neuen Handlungskontext, neue Funktionen oder einen
 neuen Ausdruck. In jedem dieser drei Typen von
 Programmiersprachen sind in der Regel Stellen im Code eingerückt, die
 die Komplexität des Codes erhöhen. Also lasse sich schlussfolgern, dass
-die Menge der Einrückungen ein Maß der Komplexität eines Programmes sei.
+die Menge der Einrückungen ein Ma\ss  der Komplexität eines Programmes sei.
 
 Zur Verifizierung dieser These setzten die Autoren die
 Einrückungskomplexität in ein Verhältnis zu den älteren Metriken wie der
@@ -539,7 +539,7 @@ Korrelation der Metriken nahe\footcite[Vgl. ][S. 2]{hindleReadingLinesUsing2009}
 Diese Korrelation konnte von den Autoren in einer Studie von 278
 populären Open Source Projekten erfolgreich nachgewiesen
 werden\footcite[][]{hindleReadingLinesUsing2009}. Damit sei die Validität der
-Einrückungskomplexität als Komplexitätsmaß von Software nachgewiesen.
+Einrückungskomplexität als Komplexitätsma\ss  von Software nachgewiesen.
 
 Für die Berechnung der Einrückungskomplexität werden die Einrückungen
 der einzelnen Codezeilen im Quelltext betrachtet. Die Anzahl an
@@ -563,5 +563,5 @@ Programmiersprache voraus \footnote{\cite[Vgl.][S. 1]{hindleReadingLinesUsing200
 
 Als zusätzlichen Vorteil führen die Autoren auf, dass die
 Einrückungskomplexität weniger Berechnungsschritte benötige als andere
-Komplexitätsmaßen. Demnach sei sie günstiger in der Durchführung als
+Komplexitätsma\ss en. Demnach sei sie günstiger in der Durchführung als
 manche andere Metriken\footcite[Vgl. ][S. 20f]{hindleReadingLinesUsing2009}.

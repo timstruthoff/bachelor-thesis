@@ -35,7 +35,7 @@ auf.
 Wie in Kapitel \ref{datensammlung} beschrieben, sollen für die Fallstudie in jedem
 Projekt zunächst verschiedene Daten erhoben werden. Für die Berechnung
 der Korrelation zwischen den Softwarekomplexitätsmetriken und den
-Aufwandsabschätzungen wird für beide Größen jeweils eine Datenquelle
+Aufwandsabschätzungen wird für beide Grö\ss en jeweils eine Datenquelle
 benötigt. Die Daten zu den Aufwandsabschätzungen sollen aus der
 Projektmanagementsoftware des Projektes bezogen werden und die Daten zu
 den Softwarekomplexitätsmetriken aus der Versionsverwaltung des
@@ -52,7 +52,7 @@ TODO Grafik
 Wie in Kapitel \ref{datensammlung} beschrieben, sollen für die Fallstudie in jedem
 Projekt zunächst verschiedene Daten erhoben werden. Für die Berechnung
 der Korrelation zwischen den Softwarekomplexitätsmetriken und den
-Aufwandsabschätzungen wird für beide Größen jeweils eine Datenquelle
+Aufwandsabschätzungen wird für beide Grö\ss en jeweils eine Datenquelle
 benötigt. Die Daten zu den Aufwandsabschätzungen sollen aus der
 Projektmanagementsoftware des Projektes bezogen werden und die Daten zu
 den Softwarekomplexitätsmetriken aus der Versionsverwaltung des
@@ -83,7 +83,7 @@ Eingabeparameter für das Analysetool übernommen.
 
 In dieser Arbeit soll die Korrelation zwischen
 Softwarekomplexitätsmetriken und Aufwandsabschätzungen beschrieben
-werden. Nachdem in \ref{nda-Datenerhebung} für beide Größen Daten gesammelt wurden, sollen
+werden. Nachdem in \ref{nda-Datenerhebung} für beide Grö\ss en Daten gesammelt wurden, sollen
 diese nun wie in \ref{verbindung-von-daten-und-hypothesen} beschrieben ausgewertet werden. Hierzu werden die
 Daten in die in \ref{implementierung-einer-untersuchungssoftware} beschriebe Analysesoftware geladen und mit ihr
 verarbeitet. Es werden zunächst vom Code Parser die
@@ -92,22 +92,27 @@ Software berechnet. Dann wird das Ergebnis dieser Berechnungen in das
 Zahlenverarbeitungsmodul geladen. Dort werden die
 Codekomplexitätsmetriken zusammen mit den Aufwandsabschätzungen zu einem
 einheitlichen Format verarbeitet und in Relation zueinander gesetzt.
-Diese Relation der Größen wird mit dem Graph in Abbildung TODO
+Diese Relation der Grö\ss en wird mit dem Graph in Abbildung TODO
 beschrieben.
 
-TODO Grafik
+\begin{figure}\label{nda-graph}
+  \begin{center}
+      \input{includes/5 analysis of the cases/figures/dtcnda-plot.pgf}
+  \end{center}
+  \caption{Verhältnis von Aufwand und Komplexität im DIL NDA Projekt.}
+\end{figure}
 
 Abbildung TODO wird im Folgenden als Korrelationsgraph des Projektes
 bezeichnet und soll nun erläutert werden. Die Abbildung besteht aus zwei
 Diagrammen, welche übereinander angeordnet sind. In dem oberen Diagram
-werden alle behandelten Größen in einem gemeinsamen Wertebereich
+werden alle behandelten Grö\ss en in einem gemeinsamen Wertebereich
 abgezeichnet. Die Story Points sind mit einer dickeren, schwarzen Linie
 dargestellt. Die restlichen Linien beschreiben die
 Codekomplexitätsmetriken. Die einzelnen Farbzuweisungen können der
 Legende im oberen linken Rand der Abbildung entnommen werden. Das zweite
 Diagramm in der Abbildung beschreibt die Differenz zwischen den Story
 Points und dem arithmetischen Mittel aller Codekomplexitätsmetriken. Es
-soll anzeigen, wo die Werte der beiden Größen besonders stark
+soll anzeigen, wo die Werte der beiden Grö\ss en besonders stark
 voneinander abweichen. Der Wertebereich dieses zweiten Diagramms ist
 analog zu dem Wertebereich des ersten Diagramms. Das Format dieser
 Abbildung wird über alle folgenden Projekte hinweg konstant gehalten.
@@ -116,17 +121,17 @@ In dem Korrelationsgraph sind die einzelnen Zeitreihen über den
 Projektzeitraum von Oktober 2018 bis November 2019 abgezeichnet. Alle
 Zeitreihen folgen einer ähnlichen Linie. Diese könnte näherungsweise als
 logarithmisch beschrieben werden. Nach einer stärkeren Steigung zum
-Anfang des Projektes flacht die Steigung aller Größen zum Ende des
+Anfang des Projektes flacht die Steigung aller Grö\ss en zum Ende des
 Projektes zunehmend ab. Dieser Verlauf konnte durch eine Verschiebung in
 dem Ziel der Softwareentwicklung begründet werden. So wurde die Software
 zum Ende hin immer langsamer weiterentwickelt. In dem Abschlussinterview
 konnten die sprungartigen Anstiege der Aufwandsabschätzungen (1) durch
 die Sprint-Intervalle erklärt werden. So werden die Storys vermehrt zum
 Sprint-Ende als fertig markiert (Analysis Table Line 20). Des Weiteren
-wurden Ende November 2018 einige große und kurzfristige Schwankungen in
+wurden Ende November 2018 einige gro\ss e und kurzfristige Schwankungen in
 den Komplexitätsmetriken identifiziert (2 in der Abbildung). In diesem
 Zeitraum wurde die Anwendung restrukturiert. Im Rahmen der
-Restrukturierung wurden regelmäßig große Codeteile entfernt und wieder
+Restrukturierung wurden regelmä\ss ig gro\ss e Codeteile entfernt und wieder
 hinzugefügt. Diese Schwankungen stehen also in keinem Zusammenhang zu
 dem tatsächlichen Umfang der Anwendung und können ignoriert werden. Von
 Mitte Dezember 2018 bis Mitte Januar 2019 ist sowohl in den
@@ -139,7 +144,7 @@ Hier wurden Entwickler von dem Projekt abgezogen.
 
 Zusammengefasst entsprechen die hier gesammelten Messdaten der
 Hypothese. Über den Projektverlauf steigen die berechneten
-Softwarekomplexitätsgrößen im größtenteils gleichen Maße wie die
+Softwarekomplexitätsgrö\ss en im grö\ss tenteils gleichen Ma\ss e wie die
 Aufwandsabschätzungen. Abweichungen und Auffälligkeiten konnten mit den
 Projektbeteiligten erklärt werden. Dementsprechend ist ein hoher
 Korrelationsgrad zu erwarten.
@@ -166,17 +171,17 @@ dem Aufwand nach Halstead (0,90).
 \subsection{Fazit}\label{Fazit}
 
 In diesem Fall konnten erfolgreich eine Zeitreihe der
-Softwarekomplexitätsmaßzahlen und eine der Aufwandsabschätzungen
+Softwarekomplexitätsma\ss zahlen und eine der Aufwandsabschätzungen
 aufgestellt werden. Es wurden wenige Störfaktoren identifiziert.
-Letztendlich wurde eine zum größten Teil sehr starke, signifikante
-Korrelation zwischen den Komplexitätsmaßen und den Aufwandsabschätzungen
+Letztendlich wurde eine zum grö\ss ten Teil sehr starke, signifikante
+Korrelation zwischen den Komplexitätsma\ss en und den Aufwandsabschätzungen
 festgestellt. Der Fall der Digital \ac{NDA} Application spricht also für eine
 Korrelation zwischen den Codekomplexitätsmetriken und den
 Aufwandsabschätzungen.
 
 \subsection{Kritik und Messfehler}\label{Kritik-und-Messfehler}
 
-Auch wenn in diesem Projekt einige Störfaktoren, wie z.B. ein größeres
+Auch wenn in diesem Projekt einige Störfaktoren, wie z.B. ein grö\ss eres
 Refactoring des Codes aufgefallen sind, kann das Analyseergebnis
 trotzdem als valide angenommen werden.
 
@@ -204,7 +209,7 @@ Arbeit zu umfangreich wäre, wird hier lediglich die Backend Komponente
 des webbasierten Service Status Dashboards (SSD-Backend-Komponente)
 betrachtet. Während in der gesamten Anwendung eine Vielzahl von
 verschiedenen Programmiersprachen verwendet wird, besteht die
-SSD-Backend-Komponente zum Großteil (93\%) aus
+SSD-Backend-Komponente zum Gro\ss teil (93\%) aus
 Java Code.
 
 InGRID wird agil nach Scrum in Sprints mit einer Dauer von jeweils drei
@@ -295,7 +300,12 @@ werden, wie in Kapitel \ref{verbindung-von-daten-und-hypothesen} beschrieben und
 erlangte Korrelationsgraph ist in Abbildung TODO zu sehen und wird nun
 beschrieben.
 
-TODO
+\begin{figure}\label{ingrid-graph}
+  \begin{center}
+      \input{includes/5 analysis of the cases/figures/ingrid-plot.pgf}
+  \end{center}
+  \caption{Verhältnis von Aufwand und Komplexität im inGRID Projekt}
+\end{figure}
 
 In dem Graph sind die Story Points, logischen Codezeilen, die
 zyklomatische Komplexität und die Einrückungskomplexität genau wie in
@@ -319,7 +329,7 @@ werden. Für die plötzlichen Anstiege und Abfälle der
 Codekomplexitätsmetriken von Januar 2021 bis März 2021 konnte ein
 Handover zwischen zwei Entwicklern als Erklärung gefunden werden. Von
 März bis August 2021 bleiben sowohl die Komplexitätsmessungen, als auch
-die Aufwandsabschätzungen größtenteils stabil. Diese Messdaten sprechen
+die Aufwandsabschätzungen grö\ss tenteils stabil. Diese Messdaten sprechen
 also für eine Korrelation. Ab August bis zum Ende der Messdaten im
 November 2021 lassen sich Anstiege in den Codekomplexitätsmetriken
 beobachten. Hier wurden bereits Funktionen in der Anwendung entwickelt,
@@ -334,24 +344,24 @@ geringe Korrelation anzeigen.
 
 TODO
 
-Diese Erwartung ließ sich durch eine Berechnung der
-Korrelationskoeffizienten bestätigen. Für die Komplexitätsmaßen der
+Diese Erwartung lie\ss  sich durch eine Berechnung der
+Korrelationskoeffizienten bestätigen. Für die Komplexitätsma\ss en der
 logischen Codezeilen und der Einrückungskomplexität konnten über die
 Koeffizienten hinweg nur Werte zwischen 0,64 und 0,43 erreicht werden.
-Diese Werte schließen zwar keine Korrelation aus, sprechen aber deutlich
-gegen eine Existenz dieser. Für die Komplexitätsmaßen der zyklomatischen
+Diese Werte schlie\ss en zwar keine Korrelation aus, sprechen aber deutlich
+gegen eine Existenz dieser. Für die Komplexitätsma\ss en der zyklomatischen
 Komplexität und des Halstead Aufwandes konnten deutlich höhere Werte
-zwischen 0,69 und 0,92 erreicht werden. Bei diesen Komplexitätsmaßen ist
+zwischen 0,69 und 0,92 erreicht werden. Bei diesen Komplexitätsma\ss en ist
 in diesem Projekt also eine Korrelation mit den
 Storypoint-Aufwandsabschätzungen durchaus anzunehmen. Als Erklärung für
-die Abweichung zwischen den Komplexitätsmaßen kann ihre
-Berechnungsmethodik vermutet werden. Sowohl die Maßzahl der logischen
+die Abweichung zwischen den Komplexitätsma\ss en kann ihre
+Berechnungsmethodik vermutet werden. Sowohl die Ma\ss zahl der logischen
 Codezeilen als auch die der Einrückungskomplexität orientieren sich, wie
 in 2.3 erklärt, zumindest in Teilen an den Zeilen im Sourcecode. Bei den
-anderen beiden Maßen spielt die Aufteilung des Codes auf Codezeilen
+anderen beiden Ma\ss en spielt die Aufteilung des Codes auf Codezeilen
 keine Rolle. Hier wird lediglich der Inhalt des Codes betrachtet. Also
 könnte die Hypothese aufgestellt werden, dass eine Aufteilung oder
-nicht-Aufteilung des Quelltextes auf Codezeilen Einfluss auf die Maßzahl
+nicht-Aufteilung des Quelltextes auf Codezeilen Einfluss auf die Ma\ss zahl
 der logischen Codezeilen und der Einrückungskomplexität genommen haben
 könnte.
 
@@ -369,7 +379,7 @@ Codekomplexitätsmetriken und Aufwandsabschätzungen zusammenhängen.
 
 \subsection{Kritik}\label{ingrid-kritik}
 
-In diesem Projekt wurden größere Abweichungen zwischen den Story Point
+In diesem Projekt wurden grö\ss ere Abweichungen zwischen den Story Point
 Abschätzungen und den Codemetriken festgestellt. Die Existenz dieser
 Abweichungen deutet zunächst daraufhin, dass ein Fehler in der Messung
 existieren könnte. Des Weiteren konnten nicht für alle Abweichungen
@@ -382,7 +392,7 @@ hinterfragt werden.
 
 Der zweite Fall dieser Fallstudie befasst sich mit dem Alstonii
 Projekt. Mit dem Alstonii Projekt soll ein mobiles Frontend für
-Vertriebsmitarbeiter eines großen Telekommunikationsanbieters geschaffen
+Vertriebsmitarbeiter eines gro\ss en Telekommunikationsanbieters geschaffen
 werden. Es soll diesen Mitarbeitern bei dem Verkauf von Breitband
 Internetanbindungen an Privat- und Firmenkunden unterstützen. Als
 digitales System soll das Alstonii Projekt einen analogen Prozess auf Basis
@@ -410,7 +420,7 @@ Projektmanagementsoftware Jira exportiert werden. Nach den in Kapitel
 Diese wurden als CSV-Datei exportiert und in die Analysesoftware
 eingelesen.
 
-Als Quelle für die Komplexitätsmaßzahlen wurde das GitHub Repository der
+Als Quelle für die Komplexitätsma\ss zahlen wurde das GitHub Repository der
 Software identifiziert. Es konnte ein Zugang beantragt werden und die
 Daten konnten über eine \ac{SSH} Verbindung in eine lokale Kopie geladen
 werden. Diese Kopie wurde dann von der Analysesoftware gelesen.
@@ -422,7 +432,13 @@ einen Schluss auf die Hypothese zu erlangen. Die Relation der
 Aufwandsabschätzungen mit den Komplexitätsmetriken ist in Abbildung TODO
 erkenntlich.
 
-TODO Grafik
+\begin{figure}\label{alstonii-graph}
+  \begin{center}
+      \input{includes/5 analysis of the cases/figures/alstonii-plot.pgf}
+  \end{center}
+  \caption{Verhältnis von Aufwand und Komplexität im Alstonii Projekt.}
+\end{figure}
+
 
 Das Projekt wird über einen Zeitraum von zwei Jahren von März 2020 bis
 Mai 2022 betrachtet. Eine dicke schwarze Linie zeigt die
@@ -431,18 +447,18 @@ Komplexitätsberechnungen für die zyklomatische Komplexität, die
 Einrückungskomplexität, den Halstead Aufwand und die logischen
 Codezeilen. Rein visuell lässt sich erkennen, dass die Linien der
 Komplexitätsmetriken ähnlich zu den Aufwandsabschätzungen verlaufen. Es
-werden jedoch auch größere Abweichungen deutlich. Einige dieser
+werden jedoch auch grö\ss ere Abweichungen deutlich. Einige dieser
 Abweichungen konnten in einem Abschlussgespräch zu dem Projekt erklärt
 werden.
 
-Zunächst konnte für die größeren Sprünge in der Einrückungskomplexität
+Zunächst konnte für die grö\ss eren Sprünge in der Einrückungskomplexität
 (Nummer 1) die Verwendung eines Linters als Erklärung herangezogen
 werden. Die Einrückungskomplexität wird über Einrückungen im Code
 berechnet. Diese werden durch einen Linter teils automatisiert in einem
-großen Umfang geändert. Der Linter passt hier die Einrückungen auf ein
+gro\ss en Umfang geändert. Der Linter passt hier die Einrückungen auf ein
 festes Niveau an, wodurch die Summe der Einrückungen (siehe Kapitel \ref{Einruckungskomplexitat}) in
-einem großen Umfang geändert wird. Bei den Sprüngen in der
-Einrückungskomplexität fällt auch auf, dass das Komplexitätsmaß nach dem
+einem gro\ss en Umfang geändert wird. Bei den Sprüngen in der
+Einrückungskomplexität fällt auch auf, dass das Komplexitätsma\ss  nach dem
 Sprung wieder auf das gleiche Niveau wie vor dem Sprung zurückkehrt. Das
 kann dadurch erklärt werden, dass die Änderungen in der Einrückung durch
 den Linter nur temporär geschehen. Wird wieder zu dem ursprünglichen
@@ -457,7 +473,7 @@ Nach der Einarbeitungsphase des neuen Teams kam es zu einem
 Sprungartigen Anstieg in den Komplexitätsmetriken.
 
 Als letzter auffälliger Punkt wurde ein plötzliches Abfallen mit einem
-anschließenden Abflachen der Komplexitätsmetriken zu Ende des Projektes
+anschlie\ss enden Abflachen der Komplexitätsmetriken zu Ende des Projektes
 ab März 2022 identifiziert. Als potenzielle Erklärung hierfür wurde eine
 Verschiebung des Entwicklungszieles vorgeschlagen. So wurde zum Ende des
 Projektes ein verstärkter Fokus auf die Konsolidierung der Codebasis und
@@ -467,8 +483,8 @@ Anwendung gleichbleibt. Diese Erwartung konnte mit den vorliegenden
 Messdaten bestätigt werden.
 
 Zusammenfassend entsprechen die hier gesammelten Daten zwar in grobem
-Maße der Hypothese, es sind jedoch einige signifikante Abweichungen
-zwischen den Maßen und den Aufwandsabschätzungen erkenntlich. Zu einem
+Ma\ss e der Hypothese, es sind jedoch einige signifikante Abweichungen
+zwischen den Ma\ss en und den Aufwandsabschätzungen erkenntlich. Zu einem
 Teil konnten sie durch technische Störfaktoren erklärt werden. Zu einem
 anderen Teil sind sie aber durch Eigenheiten in dem Verlauf des
 Projektes zu erklären. Nach dieser Durchsicht der Messdaten ist also
@@ -502,15 +518,15 @@ und Aufwandsabschätzungen.
 
 \subsection{Kritik}\label{Alstonii-kritik}
 
-In diesem Projekt ist die Bedeutung der Störfaktoren deutlich größer als
-in dem NDA Projekt. Die Abweichungen zwischen den Komplexitätsmaßen und
-den Aufwandsabschätzungen ließen sich nicht ausnahmslos erklären.
+In diesem Projekt ist die Bedeutung der Störfaktoren deutlich grö\ss er als
+in dem NDA Projekt. Die Abweichungen zwischen den Komplexitätsma\ss en und
+den Aufwandsabschätzungen lie\ss en sich nicht ausnahmslos erklären.
 
 \section{Lacustris}\label{lacustris}
 
 Ein weiteres Projekt ist das Lacustris Projekt\footnote{Lacustris
   Zeile 3}. Hierbei handelt es sich um einen Microservice, welcher ein
-Teil eines größeren Projektes darstellt. Der Microservice ist dafür
+Teil eines grö\ss eren Projektes darstellt. Der Microservice ist dafür
 verantwortlich, Daten aus einer \ac{AWS} Instanz abzurufen und diese für
 andere Microservices zur Verfügung zu stellen\footnote{Lacustris Zeile 4}.
 Entwickelt wird dieses Projekt ebenfalls in einer agilen Arbeitsweise,
@@ -518,7 +534,7 @@ sowohl von onshore, als auch von offshore Mitarbeitern. Primär sind die
 Entwickler in Ägypten lokalisiert\footnote{Lacustris Zeile 7 und 8}. Die
 Teams bestehen dabei aus einem Mix aus junior und senior Mitarbeitern.
 Alle Mitarbeiter sind erst seit wenigen Monaten an dem Projekt
-beteiligt. Die Programmiersprache des Projektes ist ausschließlich Java.
+beteiligt. Die Programmiersprache des Projektes ist ausschlie\ss lich Java.
 
 \subsection{Datenerhebung}\label{lm-Datenerhebung}
 
@@ -542,7 +558,13 @@ Aufwandsabschätzungen mit der der Codekomplexitätsmetriken in Verbindung
 gebracht. Der daraus resultierende Korrelationsgraph ist in Abbildung TODO
 erkenntlich.
 
-TODO Grafik
+\begin{figure}\label{lacustris-graph}
+  \begin{center}
+      \input{includes/5 analysis of the cases/figures/lacustris-plot.pgf}
+  \end{center}
+  \caption{Verhältnis von Aufwand und Komplexität im Lacustris Projekt.}
+\end{figure}
+
 
 Die Verläufe der verschiedenen Messreihen sollen nun beschrieben und
 Anhand der Hinweise aus dem Abschlussinterivew des Projektes erläutert
@@ -572,10 +594,10 @@ der Stabilisierung befand.
 Neben diesen Projektereignissen fallen vom 4. bis zum 13. September 2021
 starke Schwankungen in allen Metriken auf. Nach diesen Schwankungen
 verblieben die Metriken für den Rest der Projektdauer auf einem, um 20\%
-höheren Stand als vorher. Dieser starke Anstieg ließ sich auf das
+höheren Stand als vorher. Dieser starke Anstieg lie\ss  sich auf das
 Hinzufügen von vorgeneriertem Code zurückführen. So wurden durch ein
 externes Programm Datenmodelle generiert, welche an dieser Stelle dem
-Code hinzu gefügt wurden\footnote{LM Parties Zeile 19}.
+Code hinzu gefügt wurden\footnote{Lacustris Zeile 19}.
 
 In einem nächsten Schritt werden die Korrelationsmetriken berechnet:
 
@@ -610,7 +632,7 @@ Insgesamt lassen sich in diesem Projekt starke Korrelationen zwischen
 den Aufwandsabschätzungen und den Komplexitätsmetriken nachweisen. Eine
 niedrigere Korrelation nach Pearson könnte auf den Störfaktor des
 vorgenerierten Codes zurückzuführen sein. Es lässt sich also
-abschließend sagen, dass dieser Fall für eine generelle Korrelation von
+abschlie\ss end sagen, dass dieser Fall für eine generelle Korrelation von
 Aufwandsabschätzungen und Codekomplexitätsmetriken spricht.
 
 \section{Engelmannii}\label{engelmannii}
@@ -674,10 +696,15 @@ erstellt werden. Die so ermittelten Daten werden nun ausgewertet.
 
 Zur Auswertung werden auch in diesem Projekt alle Daten in ein
 Verhältnis zueinander gesetzt. Das Verhältnis der Storypoint
-Aufwandsabschätzungen zu den Komplexitätsmaßzahlen findet sich in
+Aufwandsabschätzungen zu den Komplexitätsma\ss zahlen findet sich in
 Abbildung TODO
 
-TODO Grafik
+\begin{figure}\label{engelmanii-graph}
+  \begin{center}
+      \input{includes/5 analysis of the cases/figures/engelmanii-plot.pgf}
+  \end{center}
+  \caption{Verhältnis von Aufwand und Komplexität im Engelmanii Projekt.}
+\end{figure}
 
 Bei einer genaueren Betrachtung der Messwerte fällt auf, dass die
 zyklomatische Komplexität und die Einrückungskomplexität sehr nahe den
@@ -707,7 +734,7 @@ ein ähnlicher Messfehler wie in dem Alstonii Projekt verantwortlich.
 TODO Grafik
 
 Wie zu erwartet fallen die Korrelationskoeffizienten für die Anazhl der
-logischen Codezeilen äußerst gerin aus. Mit Werten unter 0,25 ist hier
+logischen Codezeilen äu\ss erst gerin aus. Mit Werten unter 0,25 ist hier
 keine Korrelation nachweisbar. Das ist auf die Störung der Messung durch
 Berichtsdaten zurückzuführen. Hier wurde die Messung über ein Viertel
 der Projektdauer um 300\% erhöht, was den geringen
@@ -792,7 +819,7 @@ in die Analysesoftware geladen werden.
 \subsection{Auswertung}\label{gitlab-Auswertung}
 
 Die gesammelten Daten sollen nun ausgewertet werden. Der Umfang der
-Auswertung ist in diesem Projekt ca. 15-mal so groß wie in allen anderen
+Auswertung ist in diesem Projekt ca. 15-mal so gro\ss  wie in allen anderen
 Projekten. Aus diesem Grund muss die Auswertungsmethodik abgeändert
 werden. Die Berechnung der Entwicklungsstände der Software wird in einem
 Cluster aus vier Rechnungseinheiten in einem Rechenzentrum durchgeführt.
@@ -803,12 +830,17 @@ dieser Arbeit konnte nur eine Analyse der ersten dreieinhalb Jahre des
 Projektes erfolgen. Das Ergebnis dieser Analyse ist in Abbildung ..
 gezeigt.
 
-TODO Grafik
+\begin{figure}\label{gitlab-graph}
+  \begin{center}
+      \input{includes/5 analysis of the cases/figures/gitlab-plot.pgf}
+  \end{center}
+  \caption{Verhältnis von Aufwand und Komplexität im GitLab Projekt.}
+\end{figure}
 
 Zunächst ist visuell eine starke Korrelation aller Komplexitätsmetriken
 mit den Aufwandsabschätzungen erkenntlich. Gleichzeitig fallen jedoch
 auch kurzfristige Schwankungen in den Messdaten von ca. 10\% auf. Diese
-Schwankungen sind über die Projektdauer hinweg in regelmäßigen Abständen
+Schwankungen sind über die Projektdauer hinweg in regelmä\ss igen Abständen
 zu beobachten. Bei einer genaueren Analyse wurde festgestellt, dass
 diese Schwankungen wahrscheinliche auf eine Asynchronität in der
 Berechnungsmethodik der vier Berechnungsknoten zurückzuführen sind.
