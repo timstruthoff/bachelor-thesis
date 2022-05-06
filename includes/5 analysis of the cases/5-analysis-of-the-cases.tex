@@ -12,11 +12,11 @@ verzichtet.
 
 \section{Digital NDA Application}\label{digital-nda-application}
 
-Die „Digital NDA Application`` hat das Ziel, das komplette Handling der
-Verschwiegenheitserklärungen im DIL und bei potenziellen weiteren Kunden
+Die „Digital \ac{NDA} Application`` hat das Ziel, das komplette Handling der
+Verschwiegenheitserklärungen im \ac{DIL} und bei potenziellen weiteren Kunden
 zu digitalisieren. Insbesondere soll die bisher für eine
 Verschwiegenheitserklärung nötige Papierunterschrift durch eine digitale
-Signatur ersetzt werden. Dazu wird den DIL-Besuchern die Möglichkeit
+Signatur ersetzt werden. Dazu wird den \ac{DIL}-Besuchern die Möglichkeit
 gegeben, ihre Daten schon vorab über eine Webapplikation zu übermitteln,
 woraufhin die bereits auf den Besucher angepasste
 Verschwiegenheitserklärung vor Ort auf einem Tablet signiert werden
@@ -26,7 +26,7 @@ Das Projekt wurde agil von einem onshore Team aus erfahrenen Entwicklern
 in Deutschland entwickelt. Es wurden hauptsächlich JavaScript
 (52\%) und TypeScript (30\%)
 als Programmiersprachen verwendet. Zusätzlich fielen in der Analyse noch
-kleinere Programteile in Gherkin (7\%), PLpgSQL (5\%), sowie HTML,
+kleinere Programteile in Gherkin (7\%), PLpgSQL (5\%), sowie \ac{HTML},
 Shell, SCSS und der Dockerfile Syntax zu jeweils weniger als 5\% Anteil
 auf.
 
@@ -41,7 +41,7 @@ Projektmanagementsoftware des Projektes bezogen werden und die Daten zu
 den Softwarekomplexitätsmetriken aus der Versionsverwaltung des
 Quelltextes.
 
-In dem Digital NDA Application Projekt werden die Aufwandsabschätzungen
+In dem Digital \ac{NDA} Application Projekt werden die Aufwandsabschätzungen
 in der Projektmanagementsoftware Jira verwaltet. In der
 Projektmanagementsoftware finden die Aufwandsabschätzungen entsprechend
 der Scrum-Methodik (siehe Kapitel \ref{aufwandsabschuxe4tzungen-agiler-projekte}) im Rahmen von User Storys statt.
@@ -58,7 +58,7 @@ Projektmanagementsoftware des Projektes bezogen werden und die Daten zu
 den Softwarekomplexitätsmetriken aus der Versionsverwaltung des
 Quelltextes.
 
-In dem Digital NDA Application Projekt werden die Aufwandsabschätzungen
+In dem Digital \ac{NDA} Application Projekt werden die Aufwandsabschätzungen
 in der Projektmanagementsoftware Jira verwaltet. In der
 Projektmanagementsoftware finden die Aufwandsabschätzungen entsprechend
 der Scrum-Methodik (siehe Kapitel \ref{aufwandsabschuxe4tzungen-agiler-projekte}) im Rahmen von User Storys statt.
@@ -170,7 +170,7 @@ Softwarekomplexitätsmaßzahlen und eine der Aufwandsabschätzungen
 aufgestellt werden. Es wurden wenige Störfaktoren identifiziert.
 Letztendlich wurde eine zum größten Teil sehr starke, signifikante
 Korrelation zwischen den Komplexitätsmaßen und den Aufwandsabschätzungen
-festgestellt. Der Fall der Digital NDA Application spricht also für eine
+festgestellt. Der Fall der Digital \ac{NDA} Application spricht also für eine
 Korrelation zwischen den Codekomplexitätsmetriken und den
 Aufwandsabschätzungen.
 
@@ -189,7 +189,7 @@ Reporting-Lösung bietet. Sie wurde als Software as a Service Angebot mit
 einer zentralen Installation in der deutschen Cloud konzipiert. Eine
 Vielzahl von Agenten können verwendet werden, um Systeme zu überwachen.
 Die Agenten decken ein breites Spektrum an Überwachungsaktivitäten ab.
-Dazu gehören VMs, Middlewares, Anwendungen und andere Geräte (über
+Dazu gehören \ac{VM}s, Middlewares, Anwendungen und andere Geräte (über
 SNMP). Die inGRID Anwendung wird von einem Offshore Team hauptsächlich
 für Kunden in Europa entwickelt. Das Entwicklungsteam ist in Ägypten
 lokalisiert und besteht aus neun Entwickler*innen. Davon haben vier
@@ -225,7 +225,7 @@ geschlossen.
 \subsection{Datenerhebung}\label{ingrid-Datenerhebung}
 
 Für die SSD-Backend Komponente der inGRID Anwendung soll nun wie auch in
-dem Fall der NDA Anwendung eine Zeitreihe der Komplexitätsmetriken und
+dem Fall der \ac{NDA} Anwendung eine Zeitreihe der Komplexitätsmetriken und
 eine Zeitreihe der Aufwandsabschätzungen aufgestellt werden.
 
 Zunächst wird hier die Datenerhebung für die Zeitreihe der
@@ -263,10 +263,9 @@ Kriterien wird eine Vorauswahl der User Storys getroffen. Dabei werden
 alle User Storys der Komponente „SSD Backend`` ausgewählt, die einen
 Status von „Done`` in dem Feld „Resolution`` haben, und denen eine
 Anzahl an Story Points zugewiesen ist. Jira bietet eine Möglichkeit zur
-genauen Abfrage von Storys mithilfe der proprietären Abfragesprache Jira
-Query Language (JQL). Die Syntax von JQL ist stark an die Syntax der
-Abfragesprache SQL angelehnt\footcite[Vgl. ][]{atlassianptyltdUseAdvancedSearch2022}.
-Die JQL Abfrage für die User Storys findet sich im folgenden Code-Fragment.
+genauen Abfrage von Storys mithilfe der proprietären Abfragesprache \ac{JQL}. Die Syntax von \ac{JQL} ist stark an die Syntax der
+Abfragesprache \ac{SQL} angelehnt\footcite[Vgl. ][]{atlassianptyltdUseAdvancedSearch2022}.
+Die \ac{JQL} Abfrage für die User Storys findet sich im folgenden Code-Fragment.
 
 \lstset{language=SQL}
 \begin{lstlisting}
@@ -274,7 +273,7 @@ project = HCC AND component = "SSD Backend" AND issuetype = Story AND resolution
 \end{lstlisting}
 
 Mit dieser Abfrage konnten in dem inGRID Projekt 62 User Storys
-ausgewählt werden. Diese wurden als CSV-Datei exportiert und in die
+ausgewählt werden. Diese wurden als \ac{CSV}-Datei exportiert und in die
 Analysesoftware geladen.
 
 Für die zweite Zeitreihe der Quelltextkomplexitätsmessungen wird ein
@@ -392,7 +391,7 @@ Funktionalität wie der analoge Prozess.
 
 Das Projekt wird agil nach Scrum entwickelt und in mehreren
 Programmiersprachen umgesetzt. Dabei kommen zu 82\% Vue, zu 10\%
-TypeScript und zusätzlich (\textless5\%) noch HTML, JavaScript, Python,
+TypeScript und zusätzlich (\textless5\%) noch \ac{HTML}, JavaScript, Python,
 CSS, SCSS, Shell und Batch zum Einsatz. Realisiert
 wird die Anwendung hauptsächlich von einem Nearshore Team in Bulgarien.
 Unterstützt wird dieses Team von einem Offshore Team in Indien und
@@ -413,7 +412,7 @@ eingelesen.
 
 Als Quelle für die Komplexitätsmaßzahlen wurde das GitHub Repository der
 Software identifiziert. Es konnte ein Zugang beantragt werden und die
-Daten konnten über eine SSH Verbindung in eine lokale Kopie geladen
+Daten konnten über eine \ac{SSH} Verbindung in eine lokale Kopie geladen
 werden. Diese Kopie wurde dann von der Analysesoftware gelesen.
 
 \subsection{Auswertung}\label{Alstonii-Auswertung}
@@ -473,7 +472,7 @@ zwischen den Maßen und den Aufwandsabschätzungen erkenntlich. Zu einem
 Teil konnten sie durch technische Störfaktoren erklärt werden. Zu einem
 anderen Teil sind sie aber durch Eigenheiten in dem Verlauf des
 Projektes zu erklären. Nach dieser Durchsicht der Messdaten ist also
-eine weniger starke Korrelation als z.B. in dem NDA Projekt zu erwarten.
+eine weniger starke Korrelation als z.B. in dem \ac{NDA} Projekt zu erwarten.
 Die Korrelation der Komplexitätsmetriken mit den Aufwandsabschätzungen
 wird nun berechnet.
 
@@ -486,9 +485,9 @@ Signifikanzeniveau von .05 lässt sich also sagen, dass die Ergebnisse
 signifikant sind.
 
 Wie zu erwarten war, wurden in diesem Fall geringfügig niedrigere
-Korrelationskoeffizienten ermittelt als z.B. in dem NDA Projekt
+Korrelationskoeffizienten ermittelt als z.B. in dem \ac{NDA} Projekt
 ermittelt. Im Durchschnitt sind die Werte aber nur um etwa 5\% geringer
-als in dem NDA Projekt.
+als in dem \ac{NDA} Projekt.
 
 \subsection{Fazit}\label{Alstonii-fazit}
 
@@ -512,7 +511,7 @@ den Aufwandsabschätzungen ließen sich nicht ausnahmslos erklären.
 Ein weiteres Projekt ist das Lacustris Projekt\footnote{Lacustris
   Zeile 3}. Hierbei handelt es sich um einen Microservice, welcher ein
 Teil eines größeren Projektes darstellt. Der Microservice ist dafür
-verantwortlich, Daten aus einer AWS Instanz abzurufen und diese für
+verantwortlich, Daten aus einer \ac{AWS} Instanz abzurufen und diese für
 andere Microservices zur Verfügung zu stellen\footnote{Lacustris Zeile 4}.
 Entwickelt wird dieses Projekt ebenfalls in einer agilen Arbeitsweise,
 sowohl von onshore, als auch von offshore Mitarbeitern. Primär sind die
@@ -629,7 +628,7 @@ Frontend und einem Backend. Das Frontend wird primär auf JavaScript
 aufgebaut mit Technologien wie Angular und Typescript. Das Backend wird
 mit .NET realisiert. Insgesamt ist die Codebasis des Projektes über drei
 Repositories verteilt. Ein Repository beinhaltet sämtlichen Frontend
-Code, eines den Code für die API Middleware in C\# und ein letztes
+Code, eines den Code für die \ac{API} Middleware in C\# und ein letztes
 Repository umfasst eine sog. Progressive Web App.
 
 \subsection{Datenerhebung}\label{engelmannii-Datenerhebung}
@@ -655,7 +654,7 @@ Elemente mit einem Wert für das Feld „Front End Dev Story Points`` und
 einem Status von „Closed`` ein. Von insgesamt 2329 User Storys wurden
 588 als relevant ausgewählt.
 
-Die so ausgewählten Userstorys können als CSV-Datei exportiert und in
+Die so ausgewählten Userstorys können als \ac{CSV}-Datei exportiert und in
 die Analysesoftware eingelesen werden.
 
 Zur Ermittlung der Codekomplexitätsmetriken ist, wie in Kapitel \ref{verbindung-von-daten-und-hypothesen}
@@ -781,8 +780,8 @@ Kontext den User Storys. Der Aufwand zum Realisieren eines Issues wird
 als das Gewicht des Issues angegeben. Es kann dabei Synonym zu den Story
 Point Abschätzungen gesehen werden\footcite[Vgl. ][]{ScaledAgileGitLab}. Alle
 Issues des GitLab Projektes sind auf einer Website öffentlich verfügbar
-und lassen sich als CSV-Datei exportieren\footcite[Vgl. ][]{IssuesGitLabOrg}. Auf
-diese Weise konnten 68.366 Datensätze erhoben werden. Die CSV-Datei mit
+und lassen sich als \ac{CSV}-Datei exportieren\footcite[Vgl. ][]{IssuesGitLabOrg}. Auf
+diese Weise konnten 68.366 Datensätze erhoben werden. Die \ac{CSV}-Datei mit
 diesen Datensätzen kann unverarbeitet in die Analysesoftware geladen
 werden.
 
