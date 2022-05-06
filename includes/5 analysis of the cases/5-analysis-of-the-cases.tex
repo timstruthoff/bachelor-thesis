@@ -1,8 +1,8 @@
 \chapter{Untersuchung der Softwarekomplexitätsmetriken}\label{untersuchung-der-softwarekomplexituxe4tsmetriken}
 
-Mit der in Kapitel 4 TODO vorgestellten Methodik werden nun sechs
+Mit der in Kapitel \ref{forschungsaufbau-der-fallstudie} vorgestellten Methodik werden nun sechs
 Softwareprojekte als Fälle der Fallstudie untersucht. Dabei wird jedes
-Projekt zunächst wie in 4.2.3 TODO beschrieben vorgestellt. Dann wird die
+Projekt zunächst wie in \ref{analyseeinheit} beschrieben vorgestellt. Dann wird die
 Erhebung der Daten beschrieben. Am Ende der Datenerhebung steht für
 jedes Projekt ein Diagramm zu Verfügung. Für das erste Projekt wird
 dieses Vorgehen beispielhaft ausführlich erklärt. Hier wird auch der
@@ -20,19 +20,19 @@ Signatur ersetzt werden. Dazu wird den DIL-Besuchern die Möglichkeit
 gegeben, ihre Daten schon vorab über eine Webapplikation zu übermitteln,
 woraufhin die bereits auf den Besucher angepasste
 Verschwiegenheitserklärung vor Ort auf einem Tablet signiert werden
-kann\footcite[Vgl. ][]{Unternehmensinterne Quelle}.
+kann\footcite[Vgl. ][]{dxctechnologiesInternesDokumentAufbau2022}.
 
 Das Projekt wurde agil von einem onshore Team aus erfahrenen Entwicklern
 in Deutschland entwickelt. Es wurden hauptsächlich JavaScript
-(52\%\footcite[Vgl. ][]{Quelle Complexity report anhang}) und TypeScript (30\%)
+(52\%) und TypeScript (30\%)
 als Programmiersprachen verwendet. Zusätzlich fielen in der Analyse noch
 kleinere Programteile in Gherkin (7\%), PLpgSQL (5\%), sowie HTML,
 Shell, SCSS und der Dockerfile Syntax zu jeweils weniger als 5\% Anteil
 auf.
 
-\subsection{Datenerhebung}\label{Datenerhebung}
+\subsection{Datenerhebung}\label{nda-Datenerhebung}
 
-Wie in Kapitel 4.4 beschrieben, sollen für die Fallstudie in jedem
+Wie in Kapitel \ref{datensammlung} beschrieben, sollen für die Fallstudie in jedem
 Projekt zunächst verschiedene Daten erhoben werden. Für die Berechnung
 der Korrelation zwischen den Softwarekomplexitätsmetriken und den
 Aufwandsabschätzungen wird für beide Größen jeweils eine Datenquelle
@@ -44,16 +44,12 @@ Quelltextes.
 In dem Digital NDA Application Projekt werden die Aufwandsabschätzungen
 in der Projektmanagementsoftware Jira verwaltet. In der
 Projektmanagementsoftware finden die Aufwandsabschätzungen entsprechend
-der Scrum-Methodik (siehe Kapitel 3) im Rahmen von User Storys statt.
-Ein Beispiel einer User Story findet sich in Abbildung \ldots{} . In
-jeder User Story werden, wie in Kapitel 3 beschrieben wichtige
-Informationen zu der geplanten Funktion der Anwendung hinterlegt. Für
-diese Arbeit sind die Felder „Story Points`` (\#1) und „Resolved`` unter
-Dates (\#2) von besonderer Relevanz.
+der Scrum-Methodik (siehe Kapitel \ref{aufwandsabschuxe4tzungen-agiler-projekte}) im Rahmen von User Storys statt.
+In diesen User Storys ist jeweils eine Anzahl an Story Points und ein Datum vermerkt.
 
 TODO Grafik
 
-Wie in Kapitel 4.4 beschrieben, sollen für die Fallstudie in jedem
+Wie in Kapitel \ref{datensammlung} beschrieben, sollen für die Fallstudie in jedem
 Projekt zunächst verschiedene Daten erhoben werden. Für die Berechnung
 der Korrelation zwischen den Softwarekomplexitätsmetriken und den
 Aufwandsabschätzungen wird für beide Größen jeweils eine Datenquelle
@@ -65,19 +61,17 @@ Quelltextes.
 In dem Digital NDA Application Projekt werden die Aufwandsabschätzungen
 in der Projektmanagementsoftware Jira verwaltet. In der
 Projektmanagementsoftware finden die Aufwandsabschätzungen entsprechend
-der Scrum-Methodik (siehe Kapitel 3) im Rahmen von User Storys statt.
-Ein Beispiel einer User Story findet sich in Abbildung \ldots{} . In
-jeder User Story werden, wie in Kapitel 3 beschrieben wichtige
+der Scrum-Methodik (siehe Kapitel \ref{aufwandsabschuxe4tzungen-agiler-projekte}) im Rahmen von User Storys statt.
+Ein Beispiel einer User Story findet sich in Abbildung TODO . In
+jeder User Story werden, wie in Kapitel \ref{aufwandsabschuxe4tzungen-agiler-projekte} beschrieben wichtige
 Informationen zu der geplanten Funktion der Anwendung hinterlegt. Für
 diese Arbeit sind die Felder „Story Points`` (\#1) und „Resolved`` unter
 Dates (\#2) von besonderer Relevanz.
 
 TODO Grafik
 
-Aus der Software konnten insgesamt 76 Storys exportiert werden. Nach
-den, in 4.4 definierten Kriterien zur Auswahl der Aufwandsabschätzungen
-wurden zehn dieser Elemente manuell entfernt. Die restlichen 67 Einträge
-dienen wie in 4.2.4 beschrieben als Input für die Analysesoftware.
+Aus der Software konnten insgesamt 67 Storys exportiert werden und
+dienen wie in \ref{Anforderungen-an-die-Untersuchungssoftware} beschrieben als Input für die Analysesoftware.
 
 Als zweite Datenquelle wird die Versionshistorie des Quelltextes der
 DTCNDA Anwendung herangezogen. Diese liegt in Form eines Git
@@ -85,25 +79,25 @@ Repositories vor. Aus dem Git Repository konnten 1625 Commits geladen
 werden. Die Versionshistorie des Quellcodes wird ebenfalls als
 Eingabeparameter für das Analysetool übernommen.
 
-\subsection{Auswertung}\label{Auswertung}
+\subsection{Auswertung}\label{nda-Auswertung}
 
 In dieser Arbeit soll die Korrelation zwischen
 Softwarekomplexitätsmetriken und Aufwandsabschätzungen beschrieben
-werden. Nachdem in 5.1.1 für beide Größen Daten gesammelt wurden, sollen
-diese nun wie in 4.5 beschrieben ausgewertet werden. Hierzu werden die
-Daten in die in 4.7 beschriebe Analysesoftware geladen und mit ihr
+werden. Nachdem in \ref{nda-Datenerhebung} für beide Größen Daten gesammelt wurden, sollen
+diese nun wie in \ref{verbindung-von-daten-und-hypothesen} beschrieben ausgewertet werden. Hierzu werden die
+Daten in die in \ref{implementierung-einer-untersuchungssoftware} beschriebe Analysesoftware geladen und mit ihr
 verarbeitet. Es werden zunächst vom Code Parser die
 Codekomplexitätsmetriken für die einzelnen Entwicklungsstände der
 Software berechnet. Dann wird das Ergebnis dieser Berechnungen in das
 Zahlenverarbeitungsmodul geladen. Dort werden die
 Codekomplexitätsmetriken zusammen mit den Aufwandsabschätzungen zu einem
 einheitlichen Format verarbeitet und in Relation zueinander gesetzt.
-Diese Relation der Größen wird mit dem Graph in Abbildung ..
+Diese Relation der Größen wird mit dem Graph in Abbildung TODO
 beschrieben.
 
 TODO Grafik
 
-Abbildung \ldots{} wird im Folgenden als Korrelationsgraph des Projektes
+Abbildung TODO wird im Folgenden als Korrelationsgraph des Projektes
 bezeichnet und soll nun erläutert werden. Die Abbildung besteht aus zwei
 Diagrammen, welche übereinander angeordnet sind. In dem oberen Diagram
 werden alle behandelten Größen in einem gemeinsamen Wertebereich
@@ -150,14 +144,14 @@ Aufwandsabschätzungen. Abweichungen und Auffälligkeiten konnten mit den
 Projektbeteiligten erklärt werden. Dementsprechend ist ein hoher
 Korrelationsgrad zu erwarten.
 
-In einem nächsten Schritt wurden wie in 4.5 und 4.7 beschrieben die
-Korrelationskoeffizienten berechnet. Diese können Tabelle .. entnommen
+In einem nächsten Schritt wurden wie in \ref{kriterien-zur-interpretation-der-daten} und \ref{implementierung-einer-untersuchungssoftware} beschrieben die
+Korrelationskoeffizienten berechnet. Diese können Tabelle TODO entnommen
 werden.
 
 TODO
 
 Für alle Untersuchungsergebnisse wurde ein P-Wert von \textless{} .00001
-ermittelt\footcite[Vgl. ][]{\url{https://www.socscistatistics.com/pvalues/pearsondistribution.aspx}}.
+ermittelt.
 Bei einem, für Sozial- und Wirtschaftswissenschaften üblichen
 Signifikanzniveau von .05 lässt sich also sagen, dass die Ergebnisse
 signifikant sind.
@@ -210,8 +204,7 @@ Arbeit zu umfangreich wäre, wird hier lediglich die Backend Komponente
 des webbasierten Service Status Dashboards (SSD-Backend-Komponente)
 betrachtet. Während in der gesamten Anwendung eine Vielzahl von
 verschiedenen Programmiersprachen verwendet wird, besteht die
-SSD-Backend-Komponente zum Großteil (93\%\footcite[Vgl. ][]{Anhang:
-  ingrid-ssd-backend-code-language-analysis-github-linguist.txt}) aus
+SSD-Backend-Komponente zum Großteil (93\%) aus
 Java Code.
 
 InGRID wird agil nach Scrum in Sprints mit einer Dauer von jeweils drei
@@ -229,31 +222,29 @@ innerhalb von 24 bis 48 Stunden vollständig getestet. Wenn alle
 Akzeptanzkriterien der User Story erfüllt sind, wird die User Story
 geschlossen.
 
-\subsection{Datenerhebung}\label{Datenerhebung}
+\subsection{Datenerhebung}\label{ingrid-Datenerhebung}
 
 Für die SSD-Backend Komponente der inGRID Anwendung soll nun wie auch in
 dem Fall der NDA Anwendung eine Zeitreihe der Komplexitätsmetriken und
 eine Zeitreihe der Aufwandsabschätzungen aufgestellt werden.
 
 Zunächst wird hier die Datenerhebung für die Zeitreihe der
-Aufwandsabschätzungen beschrieben. Diese geschieht anhand der, in 4.4
-beschriebenen User Storys. Von besonderem Interesse für die Analyse sind
+Aufwandsabschätzungen beschrieben. Dies geschieht anhand User Storys. Von besonderem Interesse für die Analyse sind
 die Felder „Story Points`` und „Resolved Date``. Die Kombination beider
 Felder kann verwendet werden, um die Zeitreihe der Aufwandsabschätzungen
 aufzubauen. In dem Feld Story Points wird der Aufwand zur Realisierung
-der Story geschätzt. Mit dem, in 3.2 beschriebenen
+der Story geschätzt. Mit dem, in \ref{Aufwandsabschatzungen-mit-Planning-Poker} beschriebenen
 Planning-Poker-Verfahren wird der Umfang durch eine Kombination von
 Expertenmeinungen als eine Zahl in der Fibonacci Sequenz beschrieben.
-Abweichend von der in 3.2 beschriebenen Vorgehensweise werden in diesem
+Abweichend von der in \ref{aufwandsabschuxe4tzungen-agiler-projekte} beschriebenen Vorgehensweise werden in diesem
 Projekt jedoch auch die Erfahrung der Entwickler, sowie der abgeschätzte
 Aufwand in die Story Point Schätzungen mitaufgenommen. Das Feld
 „Resolved Date`` ist für die zeitliche Verortung der Aufwandsabschätzung
 der User Story relevant. Im Interview mit einem der Entwickler konnte
 ermittelt werden, dass dieses Feld den Zeitpunkt der Fertigstellung
-einer Story beinhaltet\footcite[Vgl. ][]{Interview mit Entwickler der inGRID Software}. Es kann also mit diesem Feld
+einer Story beinhaltet\footcite[Vgl. ][]{entwicklerInterviewMitEntwickler2022}. Es kann also mit diesem Feld
 gesagt werden, wann der, in der User Story spezifizierte Aufwand in die
-Anwendung geflossen ist. In dem Experteninterview\footcite[Vgl. ][]{Interview
-  mit Entwickler der inGRID Software} mit einem der Entwickler konnte an dieser Stelle eine
+Anwendung geflossen ist. In dem Experteninterview\footcite[Vgl. ][]{entwicklerInterviewMitEntwickler2022} mit einem der Entwickler konnte an dieser Stelle eine
 Verbindung zwischen den Daten aus der Projektmanagementsoftware und den
 Messdaten aus dem Code geschlussfolgert werden. Wenn eine Story
 geschlossen wird, wird auch der Code dieser Story in den „develop``
@@ -274,7 +265,7 @@ Status von „Done`` in dem Feld „Resolution`` haben, und denen eine
 Anzahl an Story Points zugewiesen ist. Jira bietet eine Möglichkeit zur
 genauen Abfrage von Storys mithilfe der proprietären Abfragesprache Jira
 Query Language (JQL). Die Syntax von JQL ist stark an die Syntax der
-Abfragesprache SQL angelehnt\footcite[Vgl. ][]{\url{https://support.atlassian.com/jira-service-management-cloud/docs/use-advanced-search-with-jira-query-language-jql/}}.
+Abfragesprache SQL angelehnt\footcite[Vgl. ][]{atlassianptyltdUseAdvancedSearch2022}.
 Die JQL Abfrage für die User Storys findet sich im folgenden Code-Fragment.
 
 \lstset{language=SQL}
@@ -295,21 +286,21 @@ Stand des Quelltextes rekonstruiert werden. Anhand dieser Rekonstruktion
 kann, wie in 4.7.2 beschrieben eine Zeitreihe der Komplexitätsmessungen
 erstellt werden.
 
-\subsection{Auswertung}\label{-ingrid-Auswertung}
+\subsection{Auswertung}\label{ingrid-Auswertung}
 
 Im Sinne der Fallstudienforschung werden in der Auswertung alle Daten in
 Relation zueinander gebracht, um so zu logischen Schlüssen zu gelangen.
-Wie in 4.2.4 beschrieben, werden die Aufwandsabschätzungen zunächst in
+Wie in \ref{verbindung-von-daten-und-hypothesen} beschrieben, werden die Aufwandsabschätzungen zunächst in
 Relation zu den Komplexitätsmetriken gebracht. Die so erlangten Daten
-werden, wie in Kapitel 4.5 beschrieben, verarbeitet. Der auf diese Weise
-erlangte Korrelationsgraph ist in Abbildung .. zu sehen und wird nun
+werden, wie in Kapitel \ref{verbindung-von-daten-und-hypothesen} beschrieben und verarbeitet. Der auf diese Weise
+erlangte Korrelationsgraph ist in Abbildung TODO zu sehen und wird nun
 beschrieben.
 
 TODO
 
 In dem Graph sind die Story Points, logischen Codezeilen, die
 zyklomatische Komplexität und die Einrückungskomplexität genau wie in
-dem NDA Projekt (siehe 5.1.2) abgezeichnet. Die Differenz zwischen dem
+dem NDA Projekt (siehe \ref{nda-Auswertung}) abgezeichnet. Die Differenz zwischen dem
 Durchschnitt aller Codemetriken und den Storypoint Abschätzungen findet
 sich, wie auch in dem ersten Projekt in einem separaten Diagramm unten
 in der Grafik.
@@ -321,7 +312,7 @@ Codekomplexitätsmetriken ein plötzlicher Abfall der Werte zu beobachten.
 Dieser Abfall ist in den Aufwandsabschätzungen nicht vermerkt. In
 Zusammenarbeit mit dem Entwickler konnte eine Migration der
 Entwicklungsumgebung als möglicher Grund hierfür identifiziert
-werden\footnote{Analyse Tabelle Zeile 38, Spalte K}. Bis Januar 2021
+werden\footnote{Analyse Tabelle Zeile 38, Spalte K TODO}. Bis Januar 2021
 fallen in den Codemetriken keine Veränderungen auf. Gleichzeitig steigen
 die Komplexitätsabschätzungen in diesem Zeitraum aber kontinuierlich
 weiter. Eine Erklärung für diese Abweichung konnte nicht gefunden
@@ -402,7 +393,7 @@ Funktionalität wie der analoge Prozess.
 Das Projekt wird agil nach Scrum entwickelt und in mehreren
 Programmiersprachen umgesetzt. Dabei kommen zu 82\% Vue, zu 10\%
 TypeScript und zusätzlich (\textless5\%) noch HTML, JavaScript, Python,
-CSS, SCSS, Shell und Batch zum Einsatz\footcite[Vgl. ][]{Sourcecode}. Realisiert
+CSS, SCSS, Shell und Batch zum Einsatz. Realisiert
 wird die Anwendung hauptsächlich von einem Nearshore Team in Bulgarien.
 Unterstützt wird dieses Team von einem Offshore Team in Indien und
 einigen Onsite Mitarbeitern. Insgesamt arbeiten so zwischen sechs und
@@ -429,7 +420,7 @@ werden. Diese Kopie wurde dann von der Analysesoftware gelesen.
 
 In der Auswertung werden alle Daten nun miteinander verbunden, um so
 einen Schluss auf die Hypothese zu erlangen. Die Relation der
-Aufwandsabschätzungen mit den Komplexitätsmetriken ist in Abbildung ..
+Aufwandsabschätzungen mit den Komplexitätsmetriken ist in Abbildung TODO
 erkenntlich.
 
 TODO Grafik
@@ -450,7 +441,7 @@ Zunächst konnte für die größeren Sprünge in der Einrückungskomplexität
 werden. Die Einrückungskomplexität wird über Einrückungen im Code
 berechnet. Diese werden durch einen Linter teils automatisiert in einem
 großen Umfang geändert. Der Linter passt hier die Einrückungen auf ein
-festes Niveau an, wodurch die Summe der Einrückungen (siehe Kapitel) in
+festes Niveau an, wodurch die Summe der Einrückungen (siehe Kapitel \ref{Einruckungskomplexitat}) in
 einem großen Umfang geändert wird. Bei den Sprüngen in der
 Einrückungskomplexität fällt auch auf, dass das Komplexitätsmaß nach dem
 Sprung wieder auf das gleiche Niveau wie vor dem Sprung zurückkehrt. Das
@@ -489,7 +480,7 @@ wird nun berechnet.
 TODO
 
 Für alle Untersuchungsergebnisse wurde ein P-Wert von \textless{} .00001
-ermittelt\footcite[Vgl. ][]{\url{https://www.socscistatistics.com/pvalues/pearsondistribution.aspx}}.
+ermittelt.
 Bei einem, für Sozial- und Wirtschaftswissenschaften üblichen
 Signifikanzeniveau von .05 lässt sich also sagen, dass die Ergebnisse
 signifikant sind.
@@ -549,7 +540,7 @@ Zeitpunkten rekonstruiert werden.
 
 Für die Auswertung werden nun auch in diesem Projekt die Zeitreihe der
 Aufwandsabschätzungen mit der der Codekomplexitätsmetriken in Verbindung
-gebracht. Der daraus resultierende Korrelationsgraph ist in Abbildung ..
+gebracht. Der daraus resultierende Korrelationsgraph ist in Abbildung TODO
 erkenntlich.
 
 TODO Grafik
@@ -564,21 +555,18 @@ Ereignisse beziehen sich auf die Projektphasen des Projektes. Vom Anfang
 des Projektes am 22. Juli 2021 bis Mitte August 2021 fällt eine
 vergleichsweise geringe Produktivität auf. Hier wurde als Begründung
 herbeigeführt, dass sich die Dynamik innerhalb des Teams erst bilden
-musste, und das Team somit noch nicht so produktiv sein konnte (\#1
-Procces:Project Phases: Initial Setup). Von Mitte August 2021 bis Mitte
+musste, und das Team somit noch nicht so produktiv sein konnte (\#1). Von Mitte August 2021 bis Mitte
 November 2021 ist die Produktivität des Teams deutlich höher und das
 Team befindet sich in einer Phase der kontinuierlichen Entwicklung (\#2
-und \#4 Procces:Project Phases:Continuous Development). Ab November 2021
+und \#4). Ab November 2021
 geht das Projekt in eine Phase der Stabilisierung über und die Codebasis
 wird eher konsolidiert als erweitert. Hier steigen die Metriken also
-weniger stark (\#5 Procces: Project Phases: Stabilization).
+weniger stark (\#5).
 
 In der Kategorie People fallen drei Ereignisse auf. Zunächst war in der
-letzten Woche des Novembers das komplette ägyptische Team im Urlaub (\#7
-People: Team Vacation: V). Dem folgte im Januar 2022 das Englische Team
-(\#8 People: Team Vacation: V). Als drittes Ereignis wurde Mitte Februar
-2022 eine Entwicklerin von dem Projekt entlassen (\#6 People: Skill
-Team-Setup-Changes: -1I). Diese drei Ereignisse wirkten sich kaum auf
+letzten Woche des Novembers das komplette ägyptische Team im Urlaub (\#7). Dem folgte im Januar 2022 das Englische Team
+(\#8). Als drittes Ereignis wurde Mitte Februar
+2022 eine Entwicklerin von dem Projekt entlassen (\#6). Diese drei Ereignisse wirkten sich kaum auf
 den Projektverlauf aus, da sich das Projekt hier schon in einer Phase
 der Stabilisierung befand.
 
@@ -628,7 +616,7 @@ Aufwandsabschätzungen und Codekomplexitätsmetriken spricht.
 
 \section{Engelmannii}\label{engelmannii}
 
-Das Engelmannii Projekt\footnote{Engelmannii Zeile 5} wird von der
+Das Engelmannii Projekt\footnote{Engelmannii Zeile 5 TODO} wird von der
 DXC für einen deutschen Energieversorger entwickelt. Es soll den
 Anwendern als zentrale Verwaltungsschnittstelle für alle Dienste des
 Energieversorgers dienen\footnote{Zeile 6}. Realisiert wird das Projekt
@@ -656,7 +644,7 @@ Format der Userstorys entspricht dabei zwar nicht in Gänze dem Format
 der anderen Projekte, die relevanten Teilinformation können aber auch
 hier problemlos abgelesen werden.
 
-In einem Interview mit einem Stakeholder des Projektes\footcite[Vgl. ][]{Quelle}
+In einem Interview mit einem Stakeholder des Projektes\footcite[Vgl. ][]{stakeholdernInterviewMitStakeholdern2022}
 konnten die relevanten Teilbereiche der User Storys identifiziert
 werden. Die Aufwandsabschätzungen seien in einem Feld mit dem Namen
 „Front End Dev Story Points`` zu finden. Das Abschlussdatum jedes
@@ -670,7 +658,7 @@ einem Status von „Closed`` ein. Von insgesamt 2329 User Storys wurden
 Die so ausgewählten Userstorys können als CSV-Datei exportiert und in
 die Analysesoftware eingelesen werden.
 
-Zur Ermittlung der Codekomplexitätsmetriken ist, wie in Kapitel 4
+Zur Ermittlung der Codekomplexitätsmetriken ist, wie in Kapitel \ref{verbindung-von-daten-und-hypothesen}
 beschrieben eine Analyse des Quelltextes der Anwendung angestrebt. Wie
 auch in den anderen Projekten, soll ein Änderungsverlauf der
 Komplexitätsmetriken aus der Versionshistorie des Quelltextes erstellt
@@ -679,7 +667,7 @@ Software im Format eines Git Repositories verfügbar. Wie eingangs
 beschrieben besteht das Projekt aus drei Repositories. In dieser Analyse
 wird jedoch lediglich die Entwicklung am Frontend der Applikation
 betrachtet. Also ist auch nur das Repository des Frontends von
-Interesse. Mit der in 4.7. beschriebenen Software kann ein Zeitverlauf
+Interesse. Mit der in \ref{implementierung-einer-untersuchungssoftware}. beschriebenen Software kann ein Zeitverlauf
 der Codekomplexitätsmetriken aus der Versionshistorie des Sourcecodes
 erstellt werden. Die so ermittelten Daten werden nun ausgewertet.
 
@@ -688,7 +676,7 @@ erstellt werden. Die so ermittelten Daten werden nun ausgewertet.
 Zur Auswertung werden auch in diesem Projekt alle Daten in ein
 Verhältnis zueinander gesetzt. Das Verhältnis der Storypoint
 Aufwandsabschätzungen zu den Komplexitätsmaßzahlen findet sich in
-Abbildung ..
+Abbildung TODO
 
 TODO Grafik
 
@@ -700,7 +688,7 @@ eine signifikante Abweichung von den Story Point Metriken von mehr als
 300\% auf. Für diese Abweichung muss ein Fehler in der Datenerhebung
 verantwortlich gemacht werden. Dabei wurden gewisse Berichtsdateien in
 die Analyse eingeschlossen, die aber nicht zu dem eigentlichen Quelltext
-der Anwendung dazugehören\footcite[Vgl. ][]{Quelle Interview}. Im August 2020
+der Anwendung dazugehören\footcite[Vgl. ][]{stakeholdernInterviewMitStakeholdern2022}. Im August 2020
 fallen die Anzahl der logischen Codezeilen und der Halstead Aufwand
 stark ab. Nach diesem Abfall befinden sie sich wieder auf einem
 ähnlichen Niveau wie die anderen Metriken. Hier wurde in einem Interview
@@ -766,8 +754,7 @@ publiziert\footcite[Vgl. ][]{GitLabCommunication}.
 
 Entwickelt wird die GitLab Applikation von über 1500 Mitarbeitern,
 welche ohne physische Büros aus 66 Ländern verteilt arbeiten\footcite[Vgl. ][]{GitLabGitLab}.
-Die gesamte Anwendung umfasst über 650 Tausend Codezeilen\footnote{Eigene
-  Analyse} und wird hauptsächlich in den Sprachen Ruby (66\%) und
+Die gesamte Anwendung umfasst über 650 Tausend Codezeilen und wird hauptsächlich in den Sprachen Ruby (66\%) und
 JavaScript (20\%)\footcite[Vgl. ][]{GitLabOrgGitLab} geschrieben. Sämtlicher code
 der Anwendung wird in einem zentral Git Repository verwaltet.
 
