@@ -1,4 +1,3 @@
-# Make sure that the first element is zero and the last is one
 dataMergedNormalized = dataMerged.copy()
 
 for column in dataMergedNormalized.columns:

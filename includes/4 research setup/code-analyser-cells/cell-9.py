@@ -5,5 +5,3 @@ for measure in MEASURE_MAPPING:
         if resultsInfo[parserMeasure]['valid']:
             measuresToExamine[measure] = parserMeasure
             break
-
-measuresToExamine

@@ -649,3 +649,224 @@ Im ersten Schritt zur Verarbeitung der Codekomplexitätsmessungen werden
 diese zunächst als Pandas Dataframe in das Modul geladen (Zeile 1). Bis
 auf den Zeitstempel können alle Datentypen automatisch erkannt werden.
 Der Datentyp des Zeitstempels wird manuell gesetzt (Zeile 2)
+
+\lstdefinestyle{pythonStyle}{
+%  basicstyle=\fontsize{7}{8}\selectfont\ttfamily
+  language=Python,
+  numbers=left,
+  stepnumber=1,
+  numbersep=10pt,
+  breaklines=true,
+  tabsize=4,
+  showspaces=false,
+  showstringspaces=false
+}
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-4.py}
+
+Dann wird der Zeitstempel als Zeitindex gesetzt (Zelle 5 Zeile 1-3)
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-5.py}
+
+Als zweiter Schritt ist eine Untersuchung der gelesenen Daten
+vorgesehen. Dabei wird zunächst untersucht, welche Ergebnisse in der
+Eingabe vorhanden sind (Zelle 7 Zeile 1-4).
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-7.py}
+
+Weiter wird eine Übersicht erstellt, zu welchen dieser Ergebnisse valide
+Werte vorliegen (Zelle 8 Zeile 1-17). Dabei werden alle Ergebnisse
+aussortiert, bei denen mehr als zehn Prozent der Messwerte ungültig
+sind.
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-8.py}
+
+Nun wird für jede zu berechnende Komplexitätsmetrik (Anzahl logischer
+Codezeilen, zyklomatische Komplexität, Halstead Aufwand und
+Einrückungskomplexität) das beste Ergebnis aus den vorliegenden
+Ergebnissen der Analysemodule ausgewählt (Zelle 9). Für diese Auswahl
+wurde zuvor in dem Zahlenverarbeitungsmodul ein Zuweisungsobjekt
+hinterlegt (Zelle 2). In diesem Zuweisungsobjekt wird für jede Maßzahl
+eine Präferenzliste der möglichen Ergebnisse der Analysemodule
+hinterlegt. In dieser Zelle wird nun über die zu berechnenden
+Komplexitätsmetriken iteriert und für jede Metrik das erste valide
+Analyseergebnis aus der Präferenzenliste ausgewählt. Die Endauswahl wird
+in einer Variable abgespeichert.
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-9.py}
+
+Anhand dieser Zuweisungstabelle wird nun ein Dataframe mit den besten
+Analyseergebnissen für jede Metrik aufgebaut. Für alle Datenpunkte, bei
+denen an dieser Stelle noch kein Wert vorhanden ist, muss davon
+ausgegangen werden, dass kein Wert ermittelt werden konnte. Diese werden
+mit 0 aufgefüllt (Zelle 10, Zeile 6)
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-10.py}
+
+Bis zu diesem Punkt konnte nun eine Tabelle mit den Datensätzen der
+Komplexitätsmessungen aufgebaut werden. Ein Beispiel ist in Tabelle ..
+aufgeführt. Jeder Datensatz beinhaltet einmal den Zeitstempel der
+Komplexitätsmessung (timestamp), die Anzahl logischer Codezeilen
+(logicalLinesOfCode), die zyklomatische Komplexität
+(cyclomaticComplexity), den Aufwand nach Halstead (halsteadEffort) und
+die Einrückungskomplexität (indendationComplexity).
+
+TODO!TABELLE
+
+Als nächster Schritt werden die Daten in einen einheitlichen
+Wertebereich normalisiert (Zelle 11). Dabei werden die Daten so linear
+verschoben und skaliert, dass jeweils der erste Wert jeder Zeitreihe 0
+ist und der letzte Wert 1 ist.
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-11.py}
+
+Zusätzlich soll nun auch das Zeitintervall normalisiert bzw.
+regularisiert werden. Dabei werden die Daten zunächst auf ein geringes
+Intervall von 60 Sekunden abgetastet. Die fehlenden Werte werden linear
+interpoliert. In einem durchschnittlichen Projekt werden so ca. 2
+Millionen Datensätze generiert. Diese Anzahl von Datensätzen ist jedoch
+zu groß, um sie weiter zu verarbeiten. Für die weitere Verarbeitung wird
+die Zeitreihe erneut auf ein Intervall von einer Stunde abgetastet, was
+die Anzahl an Datensätzen auf ca. 34 tausend reduziert.
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-12.py}
+
+Bis zu diesem Punkt wurde für jede Komplexitätsmetrik eine passende
+Messreihe ausgewählt und die Werte auf ein einheitliches Zeitintervall,
+sowie einen einheitlichen Wertebereich normalisiert. Diese Daten können
+in dieser Form zusammen mit den Aufwandsabschätzungen weiterverarbeitet
+werden.
+
+Als zweiter Arbeitsschritt befasst sich das Zahlenverarbeitungsmodul mit
+der Verarbeitung der Aufwandsabschätzungen. Diese Daten werden ebenfalls
+zunächst in einen Pandas Dataframe geladen und bereinigt (Zelle 13).
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-13.py}
+
+Weiter werden die Aufwandsabschätzungen nach ihrem Zeitpunkt aufsteigend
+sortiert (Zelle 14).
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-14.py}
+
+Weiter werden die relevanten Spalten aus den Daten ausgewählt (Zeile 1),
+der Index als Zeitstempel in der UTC Zeitzone gesetzt (Zeile 2 und 3),
+die Spalten mit einheitlichen Namen versehen und dann das resultierende
+Datenset noch einmal nach Datum aufsteigend sortiert (Zeile 5).
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-16.py}
+
+Nun werden die Storypoints wie in 4.2.4 beschrieben kumuliert (Zelle
+15). Hierzu bietet Pandas die Funktion cumsum an\footnote{PandasDataFrameCumsum}.
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-17.py}
+
+Dann wird in dem gleichen Verfahren wie bei den Codekomplexitätsmetriken
+der Wertebereich der Aufwandsabschätzungen auf einen Bereich zwischen 0
+und 1 normalisiert (Zelle 16).
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-18.py}
+
+Auch das Zeitintervall der Messdaten wird zu einem regulären
+Zeitintervall von einer Stunde vereinheitlicht (Zelle 17).
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-19.py}
+
+Das resultierende Datenset hat nun also genau wie die Codemetriken einen
+Wertebereich zwischen null und eins und eine Abtastrate von 60 Sekunden.
+Die beiden Zeitreihen sind nun also sowohl in ihrer Skalierung als auch
+in ihrer Abtastrate identisch.
+
+Als dritter Schritt des Zahlenverarbeitungsmoduls können die Zeitreihen
+der Codekomplexitätsmessungen und der Aufwandsabschätzungen nun
+zusammengeführt werden. Das geschieht mit der Merge-Funktion von
+Pandas\footnote{PandasDataFrameMergea}. Die Merge-Funktion stellt eine
+neue Tabelle mit den Werten der Codekomplexitätsmessungen und der
+Aufwandsabschätzungen auf. Durch den „how=inner`` Parameter wird
+festgelegt, dass ein Inner-Merge durchgeführt wird. Bei einem
+Inner-Merge werden nur Zeitpunkte berücksichtigt, an denen in beiden
+Zeitreihen ein Wert verhanden ist.
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-21.py}
+
+Die zusammengefügten Daten werden nun noch einmal zusammen normalisiert
+(Zelle 22)
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-22.py}
+
+Die normalisierten Daten werden als erster Ausgabeparameter der
+Analysesoftware (siehe 4.7.1) als CSV-Datei exportiert.
+
+Weiter sollen die Daten nun analysiert werden. Dazu wird zunächst mit
+der Pandas Mean-Funktion\footnote{PandasDataFrameMean} eine Zeitreihe
+des arithmetischen Mittels aller Komplexitätsmetriken berechnet (Zelle
+24).
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-24.py}
+
+Nun wird die Differenz dieses arithmetischen Mittels und den
+Aufwandsabschätzungen gebildet (Zelle 25). Ist diese Differenz besonders
+groß, heißt das, dass die Komplexitätsmessungen an dieser Stelle
+besonders stark von den Aufwandsabschätzungen abweichen.
+
+\lstset{style=pythonStyle}
+\lstinputlisting{includes/4 research setup/code-analyser-cells/cell-25.py}
+
+Aus den bis jetzt berechneten Daten kann der Korrelationsgraph
+aufgestellt werden. Dieser wird als zweiter Ausgabeparameter (siehe 4.7.1) in Form von einer
+PDF und einer PNG Datei exportiert. Der Code zur Generierung des Korrelationsgraphen findet sich im Anhang TODO.
+
+Als letzter Schritt können die Korrelationen der Komplexitätsmetriken
+mit den Aufwandsabschätzungen berechnet werden (Zelle 23). Das ist in
+dem Pandas Modul mit der Corr-Funktion\footnote{PandasDataFrameCorr}
+möglich. Die einzelnen Korrelationskoeffizienten werden dann zu einer
+Tabelle zusammengefügt (Zeile 13) und als CSV-Datei exportiert. Diese
+CSV-Datei stellt den dritten Ausgabeparameter der Analysesoftware dar
+(siehe 4.7.1).
+
+Zur Visualisierung der Korrelationskoeffizienten wird zuletzt noch eine
+Heatmap als vierter und letzter Ausgabeparameter (siehe 4.7.1) erstellt
+und im PNG und PDF Format exportiert.
+
+Zusammengefasst konnten mit der hier erläuterten Software die
+Komplexitäten zu den verschiedenen Entwicklungszeitpunkten der Software
+berechnet werden und zusammen mit den Aufwandsabschätzungen analysiert
+werden.
+
+\section{Grenzen und Probleme}\label{grenzen-und-probleme}
+
+Die hier vorgestellte Analysesoftware unterliegt einer Reihe von
+Einschränkungen.
+
+Zunächst ist sie in der Verarbeitung der Eingabeparameter beschränkt.
+Die Revisionsgeschichte der Repositories muss in der Git
+Versionsverwaltung vorliegen. Git hat laut dem Black Duck Open Hub
+Repository bei Open Source Projekten zwar einen Marktanteil von
+73\%\footnote{CompareRepositoriesOpen}, jedoch wäre eine Unterstützung
+für andere Versionskontrollsysteme auch erstrebenswert. Das
+Eingabeformat der Aufwandsabschätzungen ist zwar auf eine CSV-Datei
+beschränkt, jedoch ist CSV ein offener Standard und die meisten
+Tabellenformate lassen sich in dieses Format konvertieren.
+
+Eine weitere Einschränkung der Analysesoftware liegt in der Verarbeitung
+der Daten. Durch die Normalisierung aller Zeitreihen gehen die absoluten
+Werte verloren und die Komplexitätsmetriken können nur in Relation
+zueinander betrachtet werden. Diese Einschränkung ist notwendig, um die
+Werte vergleichbar zu machen.
+

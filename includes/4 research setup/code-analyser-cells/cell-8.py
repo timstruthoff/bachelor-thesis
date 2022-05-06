@@ -15,5 +15,3 @@ for seriesName in measures:
         'proportionOfInvalid': proportionOfInvalid,
         'valid': valid
     }
-
-resultsInfo
