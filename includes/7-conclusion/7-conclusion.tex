@@ -1,0 +1,180 @@
+\chapter{Conclusion}\label{conclusion}
+
+Die vorliegende Bachelorarbeit befasst sich mit der Fragestellung, ob
+eine Korrelation zwischen Story Point Aufwandsabschätzungen und
+Softwarekomplexitätsmetriken besteht. Das Ziel dieser Arbeit ist eine
+Näherungsangabe als Antwort zu dieser Frage zu formulieren. Als
+Forschungsmethodik wird eine explorative Fallstudien über sechs
+Softwareprojekte durchgeführt.
+
+Zur Beantwortung der Fragestellung wird zunächst die Theorie der
+Softwarekomplexitätsmetriken erläutert. Die Softwarekomplexitätsmetriken
+werden als Teil der statischen Code-Analyse in der
+Softwarequalitätssicherung in den Software Lebenszyklus eingeordnet.
+Dann werden sie als Verfahren zur Quantifizierung der Vielschichtigkeit
+der Struktur eines Computerpro-gramms definiert. Es wird auf die
+umfangreiche Kritik an Softwarekomplexitätsmetriken eingegangen. So
+seien diese Metriken schwach in ihrer Aussagekraft und könnten die
+subjektiv wahrgenommene Komplexität einer Software nicht quantifizieren.
+Im nächsten Unterkapitel der theoretischen Abhandlung der
+Softwarekomplexitätsmetriken wird eine Auswahl von Metriken getätigt.
+Die Metriken Anzahl von logischen Codezeilen, Zyklomatische Komplexität
+und Halstead Aufwand werden aufgrund ihrer hohen Anzahl an Zitierungen
+in Fachliteratur ausgewählt. Die Metrik Einrückungskomplexität wird
+aufgrund ihrer einzigartigen Berechnungsmethode betrachtet. Für alle
+vier Metriken wird dann ihr Ursprung und ihre Berechnungsmethodik
+erläutert. Außerdem wird an dieser Stelle noch einmal auf Kritik an den
+individuellen Metriken eingegangen. Als zweite Vergleichsgröße werden
+auch die Story Point Aufwandsabschätzungen erklärt. So wird im Kontext
+der agilen Softwareentwicklung nach Scrum der Aufwand zur Realisierung
+einer User Story, bzw. eines Features vor der Entwicklung abgeschätzt.
+
+Nach der theoretischen Abhandlung der Softwarekomplexitätsmetriken und
+der Aufwandsabschätzungen folgt nun eine Beschreibung des
+Forschungsaufbaus. Es wird eine explorative Fallstudie an sechs
+Softwareprojekten durchgeführt. In jedem Projekt werden zwei
+Datenquellen untersucht. Als erste Quelle werden die
+Aufwandsabschätzungen aus der Projektmanagementsoftware extrahiert. Die
+zweite Quelle sind die Quelltextverwaltungen der Projekte. Aus der
+Versionshistorie des Quelltextes können die Softwarekomplexitätsangaben
+für die einzelnen Entwicklungsstände der Software berechnet werden. Aus
+beiden Quellen wird jeweils eine Zeitreihe der Messwerte aufgestellt.
+Beide Zeitreihen werden verbunden und es wird ein
+Korrelationskoeffizient zwischen ihnen berechnet. Dieser
+Korrelationskoeffizient bezeichnet die Korrelation zwischen den
+Softwarekomplexitätsmetriken und den Aufwandsabschätzungen. Er wird als
+Ergebnis der Fälle betrachtet. Die Berechnung des
+Korrelationskoeffizienten aus den Quellen erfolgt mit einer
+Analysesoftware. Die Implementierung dieser Analysesoftware wird
+ebenfalls beschrieben.
+
+In einem nächsten Schritt findet die Untersuchung der sechs
+Softwareprojekte als Fälle der Fallstudie statt. Im ersten, dritten,
+fünften und sechsten Fall kann eine starke Korrelation aller
+Komplexitätsmetriken mit den Aufwandsabschätzungen gezeigt werden. Im
+zweiten Fall und dritten Fall hingegen sind nur starke Korrelationen
+zweier Metriken nachweisbar.
+
+Insgesamt konnte durch die Fallstudie das Forschungsziel einer
+Näherungsangabe zu der Korrelation von Softwarekomplexitätsmetriken und
+Aufwandsabschätzungen erreicht werden. In allen Fällen korreliert die
+zyklomatische Komplexität stark mit den Aufwandsabschätzungen. Also ist
+eine allgemeine Korrelation wahrscheinlich. Für den Aufwand nach
+Halstead und die Einrückungskomplexität konnte in 5 von 6, also 80\% der
+Fällen eine Korrelation nachgewiesen werden. Bei der Anzahl logischer
+Codezeilen wurde nur in vier von sechs Fällen, also zu 70\% eine
+Korrelation nachgewiesen.
+
+Insgesamt lautet das Ergebnis, dass eine starke Korrelation
+(\textgreater{} 0,8) der Softwarekomplexitätsmetriken mit den
+Aufwandsabschätzungen in jedem Fall wahrscheinlich, in keinem Fall aber
+garantiert ist.
+
+\section{Kritische Evaluierung}\label{kritische-evaluierung}
+
+Die Ergebnisse dieser Arbeit werden nun kritisch evaluiert. Insbesondere
+wird dabei auf die Gütekriterien zur Bewertung von Fallstudien nach
+Gothlich 2003 genommen. (gothlichFallstudienAlsForschungsmethode2003 S.
+13).
+
+An der \emph{Objektivität}\footcite[Vgl. ][]{gothlichFallstudienAlsForschungsmethode2003
+  S. 13} der Fallstudie lässt sich kritisieren, dass die Quelldaten der
+Analyse nicht als Teil der Arbeit veröffentlicht wurden. Diese
+beinhalten teils vetrauliche Daten und können deswegen nicht
+veröffentlicht werden. Die Analysemethoden kann jedoch anhand der
+öffentlichen Datenquellen des GitLab falls überprüft werden.
+
+Die \emph{validität der Analysekonstrukte} wurde zwar nicht in einem
+Gutachtenstil bewiesen, in einigen der Projekte jedoch durch
+Projektbeteiligte validiert.
+
+Auch an der \emph{internen Validität} der Arbeit gibt es Kritikpunkte.
+So wurde in der Interpretation der Daten keinerlei alternative
+Interpretationsmöglichkeiten berücksichtigt.
+
+Zu der \emph{externen Validität} der Fälle lässt sich sagen, dass zwar
+eine Replikationslogik angewendet wurde, das Analysevorgehen jedoch
+nicht durch Feedbackschleifen mit den Ergebnissen der Fälle verfeinert
+wurde.
+
+Für die \emph{Reliabilität} spricht zunächst das sämtliche Analysen
+vollständig automatisiert durchgeführt wurden, was Rechenfehler
+größtenteils ausschließt. Jedoch werden dadurch eventuell auch
+eigenheiten in den Messdaten ignoriert. So sind in mehreren der Fälle
+Messfehler aufgefallen, die auf einer Fehlinterpretation der Daten durch
+die Analysesoftware beruhen.
+
+Zuletzt ist auch die \emph{Utilitarität} der Studie gegeben. Abgesehen
+von einem regen Interesse innerhalb der Firma steht dem Aufwand zur
+Realisierung der Studie auch der generelle Nutzen der Validierung der
+Komplexitätsmetriken gegenüber.
+
+Zusätzlich zu den Gütekriterien von Gothlich werden auch weitere
+Kritikpunkte
+
+\section{Ausblick}\label{Ausblick}
+
+Im Folgenden soll aufbauend auf den Ergebnissen dieser Arbeit ein
+Ausblick auf mögliche weitere Entwicklungen gegeben werden.
+
+\subsection{Zusätzliche Validierung der Ergebnisse}\label{Zusatzliche-Validierung-der-Ergebnisse}
+
+Zunächst können die hier erlangten Ergebnisse weiter validiert werden.
+Dazu sollten einerseits die Messfehler in der Untersuchung der Projekte
+behoben werden. Hierzu könnte die Analysesoftware verbessert werden.
+Auch kann die Validierung der Ergebnisse durch mehr und umfangreichere
+Interviews mit Projektbeteiligten verbessert werden. Zuletzt würde eine
+Ausweitung der Fallstudie auf mehr Projekte die Validität der
+Gesamtaussage weiter stützen.
+
+\subsection{Umgebungsparameteranalyse}\label{Umgebungsparameteranalyse}
+
+Neben der Weiterentwicklung der Korrelationsanalyse ist im Rahmen dieser
+Arbeit noch ein weiterer interessanter Zusammenhang aufgefallen. An den
+Stellen, an denen die Codekomplexitätsmetriken besonders stark von den
+Aufwandsabschätzungen abwichen ließen sich in vielen Fällen besondere
+Projektereignisse nachweisen. Also liegt die Vermutung nahe, dass
+bestimmte Ereignisse im Verlauf eines Softwareprojektes eine Abweichung
+der Kompelxitätsmetriken von den Aufwandsabschätzungen herbeiführen.
+Dieser Zusammenhang könnte in einer weiteren Analyse untersucht werden.
+
+Zur Untersuchung der Analyseergebnisse wurde von einem Experten der DXC
+Technologies bereits eine sogenannte Umgebungsparameteranalyse
+skizziert. Diese wird als mögliche Weiterentwicklung dieser Arbeit im
+Folgenden beschrieben.
+
+Im Rahmen der Umgebungsparameteranalyse werden als erster Schritt Fokus
+Punkte für die weitere Analyse ausgesucht. Das sollen Zeitintervalle
+seien, an denen die Codekomplexitätsmetriken über einen bestimmten
+Schwellenwert hinweg von den Aufwandsabschätzungen abweichen. Für das
+Alstonii Projekt ist die Auswahl dieser Zeitintervalle beispielhaft in
+Abbildung .. skizziert.
+
+TODO Grafik
+
+Durch langjährige Erfahrung und Befragung von Projektbeteiligten konnten
+Umgebungsvariablen identifiziert werden, welche die Korrelation
+beeinflussen. Diese werden in drei Überkategorien gegliedert:
+Menschliche Faktoren (People), Prozessfaktoren (Process) und
+Technologiefaktoren (Technology). Zu jeder Hauptkategorie konnten Vier
+Messbereiche identifiziert werden. Diese werden mit unterschiedlichen
+quantitativen Indikatoren objektiv durch Befragung erfasst.
+
+TODO Grafik
+
+In einem dritten Schritt werden diese zwei Informationsstränge in Verbindung
+zueinander gesetzt. So sollen potenzielle Kausalitäten erkannt werden.
+Ein Umgebungsparameter könnte z.B. zu einer Abweichung der
+Komplexitätsmetriken von den Aufwandsabschätzungen führen. Der so
+generierte Kausalitätsgraph ist beispielhaft in Abbildung .. skizziert.
+
+TODO Grafik
+
+In einem letzten Schritt soll versucht werden, aus den Kausalitäten
+Verbesserungsempfehlungen für das Management des Projektes abzuleiten.
+So könnte z.B. eine Änderung in der Arbeitsmethode (Prozessfaktor) eine
+Produktivitätserhöhung herbeiführen.
+
+Insgesamt könnte mit der hier in Aussicht gestellten Arbeit ein System
+zur kontinuierlichen Verbesserung der Entwicklungstechnik in agilen
+Projekten geschaffen werden.

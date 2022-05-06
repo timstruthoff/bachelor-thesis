@@ -1,43 +1,10 @@
-\chapter{Cheatsheet}
-
-Text\footnote{Fußnote}.
-
-Referenz \ref{section:zeichencodierung}
-
-Abschnitten~\ref{section:werkzeuge}
-
-\url{https://ctan.org/pkg/hyperref}
-
-\verb|_dhbw_|
-
-\begin{verbatim}
-_dhbw_biblatex-config.tex  (weitere Einstellung für Biblatex)
-_dhbw_erklaerung.tex       (ehrenwörtliche Erklärung)
-_dhbw_kopfzeilen.tex       (Kapitelname in Kopfzeilen) 
-_dhbw_praeambel.tex        (Einbindung der benötigten Pakete)
-\end{verbatim}
-
-\lstset{language=TeX} 
-\begin{lstlisting}
-% HIER EDITIEREN: 
-\end{lstlisting}
-
-\section{Werkzeuge}\label{section:werkzeuge}
-
-\subsection{Titel und Erklärung}
-
-\subsubsection{Titel und Erklärung}
-
-\emph{Hinweis:}
-
-
 \chapter{Einleitung}\label{einleitung}
 
 Diese Bachelorarbeit wird als Teil eines Praktikums in der Digital
 Innovation Lab (DIL) Abteilung des IT-Beratungs- und
 Dienstleistungsunternehmens DXC Technology geschrieben. Die DXC
 Technology befasst sich unter anderem mit der Herstellung von
-Individualsoftware für eine Vielzahl von Kunden\footnote{Interne quelle}.
+Individualsoftware für eine Vielzahl von Kunden\footcite[Vgl. ][]{InterviewMitVertretern2022}.
 Die DIL Abteilung im Speziellen ist dabei für die Erstellung von ersten,
 minimal lauffähigen Versionen (Minimum Viable Products, MVPs) dieser
 Softwareprodukte verantwortlich. Diese MVPs werden dann von anderen
@@ -51,18 +18,16 @@ betriebswirtschaftlicher Sicht von besonderem Interesse. Auch aus der
 Perspektive der Kunden der DXC ist der Bereich der Wartung und
 Weiterentwicklung der Software von Interesse. So entfällt ein
 signifikanter Anteil der Kosten eines Softwareproduktes auf deren
-Wartung und Weiterentwicklung\footnote{Quelle fehlt}. Im Interesse des
-Kunden sollten diese Kosten gesenkt werden\footnote{Interview Katja}.
+Wartung und Weiterentwicklung\footcite[Vgl. ][S. 301]{jonesAppliedSoftwareMeasurement2008}. Im Interesse des
+Kunden sollten diese Kosten gesenkt werden\footcite[Vgl. ][]{InterviewMitMitarbeiterin2022}.
 
 Eine Vielzahl an Studien kamen zu dem Konsens, dass die Komplexität
 eines Softwareproduktes einen wesentlichen Einflussfaktor für den
 Aufwand von Wartung, Betrieb und Weiterentwicklung der Software
 darstellt. Jones 2008 konnte beweisen, dass die Komplexität und der
-Umfang von Software stark und direkt mit dem Wartungsaufwand\footnote{(Jones
-  2008 S. 64, 335, 627)} und der durchschnittlichen Fehleranzahl
-korrelieren\footnote{(Jones 2008 S. 64, 503).}. Also sei es sinnvoll,
-die Komplexität der Software permanent zu beobachten\footnote{(Jones
-  2008, S. 503).}.
+Umfang von Software stark und direkt mit dem Wartungsaufwand\footcite[Vgl. ][S. 64, 335 und 627]{jonesAppliedSoftwareMeasurement2008} und der durchschnittlichen Fehleranzahl
+korrelieren\footcite[Vgl. ][S. 64 und 503]{jonesAppliedSoftwareMeasurement2008}. Also sei es sinnvoll,
+die Komplexität der Software permanent zu beobachten\footcite[Vgl. ][S. 503]{jonesAppliedSoftwareMeasurement2008}.
 
 \section{Zielsetzung}\label{zielsetzung}
 
@@ -95,37 +60,35 @@ mögliche Einflussfaktoren gebildet werden.
 \section{Verwandte Arbeiten}\label{verwandte-arbeiten}
 
 Das Feld der Komplexitätsbestimmung von Software besteht bereits ähnlich
-lange wie die Softwareentwicklung selbst\footnote{quelle}. Erste
+lange wie die Softwareentwicklung selbst. Erste
 Komplexitätsmaßzahlen, wie z.B. die zyklomatische Komplexität von
-McCabe\footnote{McCabe, T. J. 1976} wurden in den sechziger und
-siebziger Jahren des zqwanzigsten Jahrhunderts entwickelt\footnote{Zuse,
-  H. 1991, S. 25} \footnote{Rubey, R. J./Hartwick, R. D. 1968}. Also ist
+McCabe\footcite[Vgl. ][]{mccabeComplexityMeasure1976} wurden in den sechziger und
+siebziger Jahren des zqwanzigsten Jahrhunderts entwickelt \footnote{\cite[Vgl. ][S. 25]{zuseSoftwareComplexityMeasures1991} und \cite[][]{rubeyQuantitativeMeasurementProgram1968}}. Also ist
 anzunehmen, dass auch zu der Verifizierung dieser Arbeiten bereits eine
 Vielzahl an theoretischen Abhandlungen existieren. Durch eine
 Literaturrecherche konnten einige Arbeiten zu der Verifizierung von
 Softwarekomplexitätsmetriken identifiziert werden. Diese werden im
 Folgenden zusammenfassend beschrieben.
 
-In Kemerer\footnote{Kemerer, C. F. 1987} werden verschiedene
+In \cite[][]{kemererEmpiricalValidationSoftware1987} werden verschiedene
 Komplexitätsmaßen auf 15 Projekte einer Firma angewendet. Dabei kommen
 die Codezeilen basierten Maßen SLIM und COCOMO, sowie die
 nicht-Codezeilen-basierten Maßen ESTIMACS und Function Points zum
-Einsatz\footnote{Ebenda, S. 2}. Die Autoren kamen zu dem Ergebnis, dass
+Einsatz\footcite[Vgl. ][S. 2]{kemererEmpiricalValidationSoftware1987}. Die Autoren kamen zu dem Ergebnis, dass
 die Metriken nur aussagekräftig sind, wenn sie auf die Projekte
 individuell kalibriert werden. Mit der Kalibrierung konnten
-Genauigkeitsraten von 88\% erzielt werden\footnote{Ebenda, S. 12}.
+Genauigkeitsraten von 88\% erzielt werden\footcite[Vgl. ][S. 12]{kemererEmpiricalValidationSoftware1987}.
 
 In rumreichExaminingSoftwareDesign2019 werden die Komplexitätsmetriken
 Anzahl Codezeilen, die zyklomatische Komplexität, die Halstead
 Komplexitätsmaßzahl und der Maintainability Index auf Projekte von
 Studenten angewendet, um so zu erfahren, ob eine Änderung der
-Lehrmethode die Komplexität der Projekte beeinflusst\footnote{(Rumreich
-  and Kecskemety 2019:1)}
+Lehrmethode die Komplexität der Projekte beeinflusst\footcite[Vgl. ][S. 1]{rumreichExaminingSoftwareDesign2019}
 
 In aleneziEmpiricalAnalysisComplexity2015 wird der generelle Verlauf von
 Softwarekomplexitätsmetriken untersucht. Dabei kann das sechste
 Lehmansche Gesetz bewiesen warden, nach dem die Komplexität einer
-Software über Zeit steigt\footnote{(Alenezi and Almustafa 2015:262)}\textbf{.}
+Software über Zeit steigt\footcite[Vgl. ][S. 262]{aleneziEmpiricalAnalysisComplexity2015}.
 
 \section{Forschungsbeitrag}\label{forschungsbeitrag}
 
@@ -155,30 +118,28 @@ agiler Softwareentwicklungspraktiken darstellen.
 
 Als Abschlussarbeit eines Wirtschaftsinformatik (WI) Studiums wird sich
 diese Arbeit auch an den Methodiken der WI orientieren. Die WI ist in
-ihrer Erkenntnisgewinnung methodenpluralistisch aufgestellt\footnote{Wilde,
-  T./Hess, T. o. J., S. 1}. Ihr instrumentales Portfolio beinhaltet
+ihrer Erkenntnisgewinnung methodenpluralistisch aufgestellt\footcite[Vgl. ][S. 1]{wildeMethodenspektrumWirtschaftsinformatikUberblick2006}. Ihr instrumentales Portfolio beinhaltet
 sowohl Methodiken aus den Real-, den Formal- sowie den
-Ingenieurswissenschaften\footnote{Ebenda, S. 1}.
+Ingenieurswissenschaften\footcite[Vgl. ][S. 1]{wildeMethodenspektrumWirtschaftsinformatikUberblick2006}.
 
 Unter einer Methode wird generell eine spezielle Vorgehensweise
 verstanden. Sie zeichnet sich durch ein Regelsystem von
 Untersuchungsinstrumenten aus. Ist diese Methode als wissenschaftlich zu
 klassifizieren, müssen diese Regeln auch intersubjektiv nachvollziehbar
-sein\footnote{Herrmann (1999)}.
+sein\footcite[Vgl. ][S. 1f]{wildeMethodenspektrumWirtschaftsinformatikUberblick2006}.
 
 In der WI lassen sich zwei erkenntnistheoretische Ansätze herausstellen:
 Das konstruktionswissenschaftliche Paradigma strebt nach dem Schaffen
 und Evaluieren von Informationssystemen in Form von Modellen, Methoden
-und Softwaresystemen\footnote{(Wilde/Hess S. 2).}. Es weist z.B.
+und Softwaresystemen\footcite[Vgl. ][S. 2]{wildeMethodenspektrumWirtschaftsinformatikUberblick2006}. Es weist z.B.
 Vorgehen der Informationssystemsgestaltung, wie das Prototyping
-auf\footnote{(Wilde/Hess S. 3 und Simon 1998)}. Dem gegenüber steht das
+auf\footnote{\cite[Vgl. ][S. 3]{wildeMethodenspektrumWirtschaftsinformatikUberblick2006} und \cite{simonSciencesArtificial2019}}. Dem gegenüber steht das
 behavioristische und verhaltenswissenschaftliche Paradigma. Nach diesem
 Paradigma wird in der WI das Verhalten und die Auswirkungen von
-bestehenden Informationssystemen untersucht\footnote{(vgl. Wilde / Hess
-  2006 S. 3)}.
+bestehenden Informationssystemen untersucht\footcite[Vgl. ][S. 3]{wildeMethodenspektrumWirtschaftsinformatikUberblick2006}.
 
 In dieser Arbeit soll nach dem behavioristischen Paradigma eine
-Erkenntnis gewonnen werden\footnote{(vgl. Wilde / Hess 2006 S. 3).}. Der
+Erkenntnis gewonnen werden\footcite[Vgl. ][S. 3]{wildeMethodenspektrumWirtschaftsinformatikUberblick2006}. Der
 bestehende Sachzusammenhang der Korrelation von mathematischen
 Komplexitätsmetriken mit subjektiven Aufwandsabschätzungen in agilen
 Projekten soll untersucht werden. Aus dieser Untersuchung soll induktiv
@@ -194,63 +155,53 @@ Störfaktoren dieser Korrelation abzusehen.
 
 Die Validierung einer Metrik durch die Untersuchung ihrer Korrelation
 mit einer anderen Größe ist nach Zuse, Fenton und Bowl ein verbreiteter
-Ansatz\footnote{(Zuse, 1991, p. 561)} \footnote{(Zuse, 1991, p. 562)}
-\footnote{Nach BOWL83 sei eine Metrik dann validiert, wenn sie das
-misst, was sie angibt zu messen.}. Mit der Untersuchung dieser
+Ansatz\footcite[Vgl. ][S. 561f]{zuseSoftwareComplexityMeasures1991}. Mit der Untersuchung dieser
 Korrelation können die Komplexitätsmetriken also im Kontext des DIL
 validiert werden. Eine genaue Korrelation kann und soll in dieser Arbeit
 aufgrund der zu erwartenden Störfaktoren und des geringen Umfangs der
-Untersuchung aber nicht berechnet werden\footnote{(Jones 2008:449)}.
+Untersuchung aber nicht berechnet werden\footcite[Vgl. ][S. 449]{jonesAppliedSoftwareMeasurement2008}.
 Vielmehr soll eine unvollständige Theorie in Form einer Näherungsangabe
-als ceteris-paribus Hypothese aufgestellt werden\footnote{(vgl. Wilde /
-Hess S. 3).}.
+als ceteris-paribus Hypothese aufgestellt werden\footcite[Vgl. ][S. 3]{wildeMethodenspektrumWirtschaftsinformatikUberblick2006}.
 
 Trotz ihres vergleichsweisen jungen Alters bietet die WI eine üppige
-Bandbreite an Methoden der Erkenntnisgewinnung\footnote{heinrichForschungsmethodikIntegrationsdisziplinBeitrag2005
-S. 113}. Gerade die Methodik der Fallstudienforschung erlebt einen
-stetigen Anstieg in Popularität\footnote{(yinCaseStudyResearch2014 S. 22
-/Michel et al., 2010 / David, 2006b, p. xxiii / David, 2006a / Mills,
-Durepos, \& Wiebe, 2010a))}. Insbesondere für eine beschreibende
+Bandbreite an Methoden der Erkenntnisgewinnung\footcite[Vgl. ][S. 113]{heinrichForschungsmethodikIntegrationsdisziplinBeitrag2005}. Gerade die Methodik der Fallstudienforschung erlebt einen
+stetigen Anstieg in Popularität\footcite[Vgl. ][S. 22]{yinCaseStudyResearch2014}. Insbesondere für eine beschreibende
 Forschung, wie sie in dieser Arbeit angestrebt wird, sei die
-Fallstudienmethodik geeignet\footnote{(dubeRigorInformationSystems2003
-S. 607).}. In einer Fallstudie wird ein Phänomen in seinem natürlichen
+Fallstudienmethodik geeignet\footcite[Vgl. ][S. 607]{dubeRigorInformationSystems2003}. In einer Fallstudie wird ein Phänomen in seinem natürlichen
 Kontext beschrieben. Es wird eine geringe Anzahl von Fällen intensiv
 sowohl mit qualitativen als auch quantitativen Analysemethoden
-untersucht\footnote{gothlichFallstudienAlsForschungsmethode2003 S. 7}.
+untersucht\footcite[Vgl. ][S. 7]{gothlichFallstudienAlsForschungsmethode2003}.
 Es werden verschiedene Datentypen gesammelt und diese in Verbindung
 zueinander und zu der Hypothese gebracht. Zum Herstellen dieser
 logischen Verbindungen steht eine Reihe von Werkzeugen zur Verfügung.
 Insbesondere die Zeitreihenanalyse findet in dieser Arbeit Anwendung
-\footnote{gothlichFallstudienAlsForschungsmethode2003 S. 6}. Der Aufbau
-der Fallstudie\footnote{gothlichFallstudienAlsForschungsmethode2003 S.
-8ff} wird in Kapitel 4 weiter beschrieben.
+\footcite[Vgl. ][S. 6]{gothlichFallstudienAlsForschungsmethode2003}. Der Aufbau
+der Fallstudie\footcite[Vgl. ][S.
+8ff]{gothlichFallstudienAlsForschungsmethode2003} wird in Kapitel 4 weiter beschrieben.
 
 \section{Aufbau der Arbeit}\label{aufbau-der-arbeit}
 
 Der Aufbau dieser Arbeit orientiert sich an dem Aufbau ähnlicher
-Arbeiten\footnote{(Alenezi and Almustafa 2015:260), "5.1. Selected
-  Systems" (Alenezi and Almustafa 2015:260), "Threats to Validity"
-  (Alenezi and Almustafa 2015:264)} und soll so eine zielgerichtete und
+Arbeiten\footcite[Vgl. ][S. 260]{aleneziEmpiricalAnalysisComplexity2015} und soll so eine zielgerichtete und
 übersichtliche Erfassung der Maßzahlen ermöglichen.
 
 Zunächst wird das Thema der Softwarekomplexität aus einem generellen
-Blickwinkel betrachtet (Kapitel 2). Dabei wird der Begriff
-Softwarekomplexität zunächst definiert und dann erläutert (Kapitel 2.1
-und 2.2). In einem zweiten Schritt werden verschiedene Methoden zur
+Blickwinkel betrachtet (Kapitel \ref{softwarekomplexituxe4tsmauxdfe}). Dabei wird der Begriff
+Softwarekomplexität zunächst definiert und dann erläutert (Kapitel \ref{definitionen}). In einem zweiten Schritt werden verschiedene Methoden zur
 Messung von Softwarekomplexität begründet ausgewählt und erklärt
-(Kapitel 2.4).
+(Kapitel \ref{eine-auswahl-von-softwarekomplexitatsmasszahlen}).
 
-Als Gegenstück zu den Softwarekomplexitätsmetriken werden in Kapitel 3
+Als Gegenstück zu den Softwarekomplexitätsmetriken werden in Kapitel \ref{aufwandsabschuxe4tzungen-agiler-projekte}
 die Komplexitätsabschätzungen der Experten erläutert. Dabei wird
 insbesondere auf den Kontext der Komplexitätsabschätzungen in der agilen
 Entwicklung der Projekte Bezug genommen.
 
-Nach der Definition der beiden Untersuchungsgrößen wird in Kapitel 4 der
+Nach der Definition der beiden Untersuchungsgrößen wird in Kapitel \ref{forschungsaufbau-der-fallstudie} der
 Aufbau der Fallstudienforschung beleuchtet. Es wird ein formales
 Forschungsprotokoll definiert. Insbesondere wird ein Analysealgorithmus
 zur automatisierten Untersuchung der Projekte vorgestellt.
 
-Ab Kapitel 5 findet die praktische Untersuchung der Komplexitätsmetriken
+Ab Kapitel \ref{untersuchung-der-softwarekomplexituxe4tsmetriken} findet die praktische Untersuchung der Komplexitätsmetriken
 statt. Es werden die einzelnen Projekte als Fälle vorgestellt. Jeweils
 wird die Datenerhebung beschrieben und mit der zuvor erläuterten
 Forschungsmethodik ausgewertet. In jedem Projekt wird ein Fazit zu der
@@ -259,11 +210,11 @@ gesammelte Zusatzdaten aus den Projekten hinzugezogen, um das
 Forschungsergebnis zu erklären und auch mögliche Störfaktoren
 aufgezeigt.
 
-Eine gesammelte Analyse aller Ergebnisse findet in Kapitel 6 statt. Hier
+Eine gesammelte Analyse aller Ergebnisse findet in Kapitel \ref{zusammenfassende-analyse-der-untersuchungsergebnisse} statt. Hier
 wird versucht, aus den Ergebnissen der einzelnen Projekte einen Schluss
 auf eine generelle Korrelation zu ziehen.
 
-Zuletzt wird in Kapitel 7 ein Fazit der Arbeit gegeben. Dabei wird
+Zuletzt wird in Kapitel \ref{conclusion} ein Fazit der Arbeit gegeben. Dabei wird
 insbesondere auf mögliche Kritik an den Forschungsergebnissen
-eingegangen (Kapitel 7.1) und ein Ausblick auf weitere Entwicklungen
-gegeben (Kapitel 7.2).
+eingegangen (Kapitel \ref{kritische-evaluierung}) und ein Ausblick auf weitere Entwicklungen
+gegeben (Kapitel \ref{Ausblick}).

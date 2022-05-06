@@ -1,0 +1,91 @@
+\chapter{Zusammenfassende Analyse der Untersuchungsergebnisse}\label{zusammenfassende-analyse-der-untersuchungsergebnisse}
+
+Im vorherigen Kapitel wurde die Korrelation zwischen
+Aufwandsabschätzungen und Codekomplexitätsmetriken in sechs Fällen
+untersucht. Das Ergebnis dieser Untersuchung ist ein vier-Dimensionales
+Datenset. Die vier Achsen dieses Datensets sind das Projekt, die
+Codekomplexitätsmetrik, der Korrelationskoeffizient und der Wert dieser
+Korrelation. Die Darstellung vier-dimensionaler Daten ist zwar
+möglich\footcite{sarkarArtEffectiveVisualization2021}, im Rahmen dieser
+Arbeit aber wenig praktikabel. Also ist die Reduktion des Datensets auf
+drei Dimensionen angestrebt. Es muss also eine Dimension entfernt
+werden. Da das Ziel dieser Arbeit eine Aussage über eine generelle
+Korrelation ist, wird die Dimension der Korrelationskoeffizienten
+vernachlässigt. Auch wurde diese Dimension in der Betrachtung der
+individuellen Projekte bereits analysiert. Zur Reduktion des Datensets
+auf drei Dimensionen wird das arithmetische Mittel der drei
+Korrelationskoeffizienten als Wert übernommen. Das reduzierte Ergebnis
+aller Projekte ist in Abbildung ... gezeigt.
+
+TODO Grafik
+
+In Abbildung \ldots{} sind die durchschnittlichen
+Korrelationskoeffizienten für die einzelnen Komplexitätsmetriken in den
+Projekten dargestellt. Zunächst wird versucht die Ergebnisse in den
+individuellen Projekten zu begründen. Dann soll ein genereller Schluss
+gezogen werden.
+
+Der Fall des DIL NDA Projektes weist in allen vier Komplexitätsmetriken
+starke Korrelationen auf. In der Analyse wurden kaum Störfaktoren
+identifiziert. Es ist also davon auszugehen, dass das Ergebnis
+hinreichend genau ist. Dieser Fall spricht für eine Korrelation aller
+vier Komplexitätsmetriken mit den Aufwandsabschätzungen.
+
+Im Falle des inGRID-Projektes konnten für die Zyklomatische Komplexität
+und den Aufwand nach Halstead starke Korrelationen nachgewiesen werden.
+Für das Fehlen der Korrelationen bei den Logischen Codezeilen und der
+Einrückungskomplexität konnte keine Erklärung gefunden werden. Also
+spricht dieser Fall gegen Korrelation zwischen diesen beiden Metriken
+und den Aufwandsabschätzungen.
+
+Das Alstonii Projekt spricht trotz einiger Störfaktoren für eine Korrelation
+zwischen allen Metriken und den Aufwandsabschätzungen.
+
+Auch in dem Lacustris Projekt konnten für alle Metriken
+sehr starke Korrelationen festgestellt werden. Die
+Pearson-Produkt-Moment-Korrelation fiel für die Anzahl logischer
+Codezeilen, die zyklomatische Komplexität und die Einrückungskomplexität
+zwar nur schwach aus, jedoch ist diese schwache Korrelation
+wahrscheinlich auf einen Störfaktor zurückzuführen.
+
+Bei dem Engelmannii Projekt korrelieren nur die zyklomatische Komplexität und die Einrückungskomplexität mit den
+Aufwandsabschätzungen. Die beiden anderen Metriken wurden von einem
+Messfehler gestört.
+
+Zuletzt konnten in dem Fall des GitLab Projektes ebenfalls sehr starke
+Korrelationen aller Komplexitätsmetriken gemessen werden.
+
+In Tabelle .. findet sich eine Übersicht aller
+Komplexitäts-Korrelationen aller Projekte. Ein X in dem entsprechenden
+Feld bedeutet, dass hier durchschnittlich ein starker
+Korrelationskoeffizient (\textgreater{} 0.8) festgestellt wurde.
+
+TODO Grafik
+
+Insgesamt konnte für die zyklomatische Komplexität in allen Fällen eine
+starke Korrelation nachgewiesen werden. Für den Aufwand nach Halstead
+und die Einrückungskomplexität konnte in 5 von 6, also 80\% der Fällen
+eine Korrelation nachgewiesen werden. Bei der Anzahl logischer
+Codezeilen wurde nur in vier von sechs Fällen, also zu 70\% eine
+Korrelation nachgewiesen.
+
+Die Ausgangsfragestellung dieser Arbeit ist, ob eine Korrelation
+zwischen Storypoint-Aufwandsabschätzungen und
+Softwarekomplexitätsmetriken existiert. Diese Frage kann mit einem
+eingeschränkten „Ja`` beantwortet werden: Bei der Komplexitätsmetrik der
+zyklomatischen Komplexität sprechen alle Fälle für eine Korrelation.
+Zwar kann aufgrund der geringen Anzahl an Fällen in dieser Studie keine
+generelle und allgemeingültige Aussage zu der Korrelation der
+zyklomatischen Komplexität mit den Aufwandsabschätzungen getroffen
+werden, jedoch ist eine solche Korrelation sehr wahrscheinlich. Bei dem
+Halstead Aufwand und der Einrückungskomplexität spricht jeweils ein
+Projekt gegen eine Starke Korrelation. Trotzdem ist eine generelle
+Korrelation durchaus wahrscheinlich. Zuletzt sprechen bei der Anzahl an
+logischen Codezeilen nur 70\% der Fälle für eine starke Korrelation der
+Metrik mit den Aufwandsabschätzungen, jedoch ist auch hier eine leichte
+Korrelation sehr wahrscheinlich. Insgesamt kann mit den Ergebnissen
+dieser Arbeit gesagt werden, dass eine Korrelation zwischen Story Point
+Aufwandsabschätzungen und Codekomplexitätsmetriken nicht ausgeschlossen
+und in den meisten Fällen sehr wahrscheinlich ist. Die anfängliche
+Zielsetzung einer Näherungsangabe zu dieser Frage ist also hiermit
+erfüllt.
